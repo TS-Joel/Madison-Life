@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>WOL</Name>
+  <Parent>Testing Projections</Parent>
+  <Previous>CashBenefit</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.2994365+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.2994365+02:00</CreatedOn>
+  <Key>WOL</Key>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.2994365+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>false</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>Results\0_TEST</ResultsFolder>
+  <DebugInfo>false</DebugInfo>
+  <ReThrowException>false</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <DebugRecordId />
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>true</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>2</ParallelSplits>
+  <Threads>20</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <Code>Overrides Sub RunCode(Optional OutputResults As Boolean = True)
+    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(9)
+    ExecuteRecords(OutputResults)
+    If OutputResults Then ReferencedProjections.WriteResults()
+End Sub</Code>
+  <ModelName>WPEndowModelReporting</ModelName>
+  <Basis />
+  <InputsTable>
+    <Name>MPRunWPEndowReserving_Inputs</Name>
+    <Parent />
+    <Previous />
+    <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+    <LastModifiedOn>2026-08-14T13:31:23.2984358+02:00</LastModifiedOn>
+    <CreatedBy>KyawSoeThein</CreatedBy>
+    <CreatedOn>2026-08-14T13:31:23.2984358+02:00</CreatedOn>
+    <Folder>false</Folder>
+    <LastModified>2026-08-14T13:31:23.2984358+02:00</LastModified>
+    <Notes />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>D:\True South\Advisory Clients - Madison Life\2025 Take-On\02 Work in progress\02 Tools\Data\DMT Output v8\IF\MADISON WHOLE LIFE ASSURANCE POLICY.csv</FilePath>
+    <Schema />
+    <Reference>Mad_AllEndow_MPFs</Reference>
+    <Delimiter>,</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>RowAndCol</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>1</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>2</Rows>
+    <Cols>2</Cols>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties />
+  <InputOverrides>true</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>false</ReadFromFileIfAvailable>
+  <ProjectionInputs />
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>12</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>12</ColumnSumEnd>
+  <PerRecordResults>true</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput>PolSequence, ProductName, GrossBEL, PVAcquisitionExpenses, PVClaims, PVComission, PVRenewalExpenses, PVPremiums, Premium, SumAssured, PremiumWithFrequency, Frequency, Accidental_Death_cover, Accidental_Death_Fam_cover, AccidentalDeathBEL, AccidentalDeathFamRICover, AccidentalDeathRICover, AccidentalDeathUnwind_WP, AcquisitionAAW_func, AcquisitionAAWUnwind_WP, AmtInvestedBEL_WP, AnnuityBEL_WP, Cashback_cover, CashBackBEL, CashBackUnwind_WP, CEPCUnwind_WP, ClaimExpPercClaimAmt_func, ClaimExpPerClaim_func, ClaimPercClaimAmtUnwind_WP, Comission_Clawback_func, Comission_func, ComissionClawbackUnwind_WP, Comm_Perc_func, CommissionUnwind_WP, CoverStartDate, Critical_Illness_cover, CriticalIllnessBEL_WP, CriticalIllnessRICover, CriticalIllnessUnwind_WP, CU_Current_Service_WP, CU_func_WP, CU_Future_Service_WP, CUEntrepo_WP, Death_cover, DeathBEL, DeathRICover, fnRiskDiscountRate, Funeral_cover, FuneralBEL_WP, FuneralCoverUnwind_WP, FuneralRICover, FutureServiceCU_WP, GuaranteedOEInterestBEL_WP, InitExpPercPremUnwind_WP, InitExpPerPolUnwind_WP, InitialExpPercPremium_func, InitialExpPP_func, LumpsumDeathBEL_WP, MaturityBEL, Natural_Death_cover, Natural_Death_Fam_cover, NaturalDeathBEL_WP, NaturalDeathFamRICover, NaturalDeathRICover, NaturalDeathUnwind_WP, OEValueBOMBEL_WP, OEValueEOMBEL_WP, PaidUpBEL_WP, PartialSurrenderBEL_WP, Per_pol_exp_func, Perc_CU_exp_func, Perc_premium_exp_func, PercCUExpenseUnwind_WP, PercPremExpenseUnwind_WP, PeriodIF, Permanent_Disability_cover, PermanentDisabilityBEL_WP, PermanentDisabilityRICover, PermenentDisabilityUnwind_WP, PPEUnwind_WP, PremiumCF, PremiumsBEL, PremiumsUnwind_WP, ProductName_output, ProjTerm, Retrenchment_cover, RetrenchmentBEL_WP, RetrenchmentRICover, RetrenchmentUnwind_WP, RIAccidentalDeathBEL_WP, RIAccidentalDeathUnwind_WP, RICriticalIllnessBEL_WP, RICriticalIllnessUnwind_WP, RICU_WP, RIDeathBEL_WP, RIDeathUnwind_WP, RIFuneralBEL_WP, RIFuneralUnwind_WP, RIFutureServiceCU_WP, RINaturalDeathBEL_WP, RINaturalDeathUnwind_WP, RIPermanentDisabilityBEL_WP, RIPermanentDisabilityUnwind_WP, RIPremiums, RIRetrenchmentBEL_WP, RIRetrenchmentUnwind_WP, RITemporaryDisabilityBEL_WP, RITemporaryDisabilityUnwind_WP, RITerminalIllnessBEL_WP, RITerminalIllnessUnwind_WP, Surrender_cover, SurrenderBEL, SurrenderUnwind_WP, Temporary_Disability_cover, TemporaryDisabilityBEL_WP, TemporaryDisabilityRICover, TemporaryDisabilityUnwind_WP, Terminal_Illness_cover, TerminalIllnessBEL_WP, TerminalIllnessRICover, TerminalIllnessUnwind_WP, ValDateStep, ValMonth, WOPBEL</CustomRecordOutput>
+  <Delimiter>Tab</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>

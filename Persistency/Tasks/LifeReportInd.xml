@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>LifeReportInd</Name>
+  <Parent>Life</Parent>
+  <Previous>LifeReserving</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.2944365+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.2944365+02:00</CreatedOn>
+  <Key>LifeReportInd</Key>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.2944365+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>false</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>Results\Funeral\IndRecs</ResultsFolder>
+  <DebugInfo>true</DebugInfo>
+  <ReThrowException>true</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <DebugRecordId />
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>false</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>0</ParallelSplits>
+  <Threads>0</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <Code>Overrides Sub RunCode(Optional OutputResults As Boolean = True)
+    ' Group by record
+    DefineGrouping(Function(var) "Record = " &amp; Record.Number)
+    
+    ' Output delimiter
+    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(9)
+    
+    ' Filter output to first 12 time periods only
+    Me.ResultsFilter.SetRows(Function(row) row &lt;= 6)
+
+    ' Configure result output for this task
+    ResultOptions.Apply(WriteTypes.Records, Me)
+    ResultOptions.Apply(1, WriteTypes.None, Me)
+
+    ' Run the projection
+    ExecuteRecords(OutputResults)
+
+    ' === Merge and consolidate result files ===
+    If OutputResults Then
+        Dim task As Model = Me
+        ' Merge column function results
+        Dim colResults = MergeResults.ColumnSubTotals(task)
+        FileText.Write(Me.Properties.ResultsFolder &amp; "MergedColumnResults_Records.txt", colResults)
+
+    End If
+End Sub</Code>
+  <ModelName>LifeModelReporting</ModelName>
+  <Basis />
+  <InputsTable>
+    <Name>MPRun_Inputs</Name>
+    <Parent />
+    <Previous />
+    <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+    <LastModifiedOn>2026-08-14T13:31:23.2944365+02:00</LastModifiedOn>
+    <CreatedBy>KyawSoeThein</CreatedBy>
+    <CreatedOn>2026-08-14T13:31:23.2944365+02:00</CreatedOn>
+    <Folder>false</Folder>
+    <LastModified>2026-08-14T13:31:23.2944365+02:00</LastModified>
+    <Notes />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>AssumptionsManager</FilePath>
+    <Schema />
+    <Reference>Life_MPF_CLS</Reference>
+    <Delimiter>	</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>RowAndCol</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>1</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>2</Rows>
+    <Cols>30</Cols>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties />
+  <InputOverrides>true</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>false</ReadFromFileIfAvailable>
+  <ProjectionInputs />
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>12</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>12</ColumnSumEnd>
+  <PerRecordResults>true</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput>ValDateStep, GrossBEL, PVAcquisitionExpenses, PVClaims, PVComission, PVRenewalExpenses, PVPremiums</CustomRecordOutput>
+  <Delimiter>Tab</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>

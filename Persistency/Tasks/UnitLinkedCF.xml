@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>UnitLinkedCF</Name>
+  <Parent>UnitLinked</Parent>
+  <Previous />
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.297435+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.297435+02:00</CreatedOn>
+  <Key>MPRunUnitLinkedCF</Key>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.297435+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>false</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>Results\UnitLinked</ResultsFolder>
+  <DebugInfo>true</DebugInfo>
+  <ReThrowException>true</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>false</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>0</ParallelSplits>
+  <Threads>0</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <ModelName>UnitLinkedModelCF</ModelName>
+  <Basis />
+  <InputsTable>
+    <Name>MPRunUnitLinkedCF_Inputs</Name>
+    <Parent />
+    <Previous />
+    <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+    <LastModifiedOn>2026-08-14T13:31:23.2964359+02:00</LastModifiedOn>
+    <CreatedBy>KyawSoeThein</CreatedBy>
+    <CreatedOn>2026-08-14T13:31:23.2964359+02:00</CreatedOn>
+    <Folder>false</Folder>
+    <LastModified>2026-08-14T13:31:23.2964359+02:00</LastModified>
+    <Notes />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>AssumptionsManager</FilePath>
+    <Schema />
+    <Reference>MPF_CLS_UL_Test</Reference>
+    <Delimiter>	</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>RowAndCol</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>1</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>2</Rows>
+    <Cols>76</Cols>
+    <ColWidths>80;103;81;74;92;69;110;58;88;100;139;113;123;71;127;100;85;116;75;83;71;115;108;97;122;56;72;76;123;117;125;89;78;97;143;82;102;95;114;83;96;139;153;176;137;160;173;144;172;141;134;104;106;140;99;113;118;161;175;159;195;166;194;163;156;154;96;130;99;112;114;85;85;85;85;85;85;85;85;85;92;176;218;232;216;235;207;235;203;197;54;69;125;114;93;84;143;104;94;153;108;114;121;121;121;59;106</ColWidths>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties />
+  <InputOverrides>true</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>true</ReadFromFileIfAvailable>
+  <ProjectionInputs>
+    <ProjectionInput>
+      <Name>MemberStatus</Name>
+      <LastModifiedOn xsi:nil="true" />
+      <CreatedOn xsi:nil="true" />
+      <Value>P</Value>
+      <Source>Manual</Source>
+    </ProjectionInput>
+    <ProjectionInput>
+      <Name>IsShareholderInd</Name>
+      <LastModifiedOn xsi:nil="true" />
+      <CreatedOn xsi:nil="true" />
+      <Value>0</Value>
+      <Source>Manual</Source>
+    </ProjectionInput>
+    <ProjectionInput>
+      <Name>Life2Status</Name>
+      <LastModifiedOn xsi:nil="true" />
+      <CreatedOn xsi:nil="true" />
+      <Value>None</Value>
+    </ProjectionInput>
+  </ProjectionInputs>
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>180</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>180</ColumnSumEnd>
+  <PerRecordResults>false</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput />
+  <Delimiter>Tab</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>

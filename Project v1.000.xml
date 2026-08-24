@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Master_Development_Model_v4.6.10</Name>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn xsi:nil="true" />
+  <CreatedOn xsi:nil="true" />
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:02.5964341+02:00</LastModified>
+  <Notes>Madison - 4.6.7 calibration model - as of 25-05-2026
+
+v4.6.6
+update for CS benefit SV for 3 year variants
+update for CSR paid up benefit
+update for Annuities life relationships P and D
+update for Credit Life loan - student phase v post grad phase
+Added Henk's testing variables
+
+v4.6.7
+- Updated for Prem and SA escalation, include retrospective bonuses on MainSA from inception
+- Updated age definition to align with Madison - Age in days /365.25 then apply age next
+- Updated yield curves to QED query feedback provided
+
+v4.6.8
+- Removed the 5% gross of levy on commission adjustment
+
+v4.6.9
+- Updated surrender cover factor
+- Updated bonuses to be simple from compound
+- Updated to switch off ABI and API
+
+v4.6.10
+- Updated starting bonus to be taken from data field and not recalculated.
+- Final testing version used for recon take-on
+
+
+
+</Notes>
+  <IsExpanded>true</IsExpanded>
+  <CreateDate>2025-05-12T10:24:14.1539262+02:00</CreateDate>
+  <UserId>KyawSoeThein</UserId>
+  <AppVersion>6000</AppVersion>
+  <VersionNo>1.000</VersionNo>
+  <CompanyName />
+  <Logo />
+  <Documentation />
+  <DocumentationBackedUp>false</DocumentationBackedUp>
+  <CommitDate>0001-01-01T00:00:00</CommitDate>
+  <References />
+  <ExternalSourceControl>true</ExternalSourceControl>
+  <DisableLastModified>true</DisableLastModified>
+  <RevisionIds />
+  <OpenAsReadOnly>false</OpenAsReadOnly>
+</Project>

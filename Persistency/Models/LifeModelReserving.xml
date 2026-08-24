@@ -1,0 +1,2743 @@
+<?xml version="1.0"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>LifeModelReserving</Name>
+  <Parent>SubLayer3</Parent>
+  <Previous>FuneralModelReserving</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.1899222+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.1899222+02:00</CreatedOn>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.1899222+02:00</LastModified>
+  <Notes>Reserving model layer - contains the present value of cash flows and discounting functionality</Notes>
+  <IsExpanded>true</IsExpanded>
+  <Inherit>false</Inherit>
+  <Declarations />
+  <UseDefaultExecuteCode>false</UseDefaultExecuteCode>
+  <Inputs />
+  <Params>
+    <Parameter>
+      <Name>AIDS</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>CriticalIllness</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1899222+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1899222+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1899222+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>AccidentalMortality</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>AnnuityMortality</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1899222+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1899222+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1899222+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>AnnuityMortality</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Mortality</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1899222+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1899222+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1899222+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>CUDiscounting</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>InflationYC</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>NOM_MAR_2025</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>CriticalIllness</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Retrenchment</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>DecrementBasis</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>LIYCRun</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>DecrementsCLS</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Expense</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Surrenders</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>ExpenseBasis</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>DecrementBasis</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>ExpensesCLS</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>ExpenseInflation</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Expense</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>InflationYC</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>NominalYC</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>INF_MAR_2025</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>LIYCRun</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>CUDiscounting</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>0</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Lapses</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>MPFName</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>MPFName</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RegulatoryExpenseBasis</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>MPF_CLS</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>MarginBasis</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>ExpenseBasis</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Best estimate</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>MorbidityCATIndicator</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>MortalityCATIndicator</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1913545+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1913545+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1913545+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>0</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Mortality</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Lapses</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>MortalityCATIndicator</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>PolicyStartLevel</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>0</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>NBMarker</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RunType</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>No</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>NaturalMortality</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>AccidentalMortality</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>NextValnDate</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>ValnDate</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Date</DataType>
+      <Value>28/02/2025</Value>
+      <Format>dd/MM/yyyy</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>NominalYC</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Product</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>NOM_MAR_2025</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Parent</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>IModel</DataType>
+      <Value>LifeModelReporting</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadWrite</Access>
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>PermanentDisability</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>NaturalMortality</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>PolicyStartLevel</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>ExpenseInflation</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Product</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>NBMarker</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Funeral</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RegulatoryExpenseBasis</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>MarginBasis</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>IFRS</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Retrenchment</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>TemporaryDisability</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RunCategory</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>NextValnDate</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Opening</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RunNumber</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RunCategory</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>1</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RunOutputNextValnDate</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RunOutputValnDate</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Date</DataType>
+      <Value>28/02/2025</Value>
+      <Format>dd/MM/yyyy</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RunOutputValnDate</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>ShockDuration</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Date</DataType>
+      <Value>28/02/2025</Value>
+      <Format>dd/MM/yyyy</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>RunSetupTblPrm</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>Parent</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>TableStr</DataType>
+      <Value>RunControlTbl</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>RunType</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RunNumber</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>7.1 Closing - step 3 - base - current rates</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>SMCoreModel</Name>
+      <Parent />
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.192361+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.192361+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.192361+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Model</DataType>
+      <Value>CoreModel</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>SMLifelModelCF</Name>
+      <Parent />
+      <Previous>SMCoreModel</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Model</DataType>
+      <Value>LifeModelCF</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source />
+    </Parameter>
+    <Parameter>
+      <Name>ShockDuration</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>MorbidityCATIndicator</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>1440</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>Surrenders</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>AIDS</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>TemporaryDisability</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>TerminalIllness</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>TerminalIllness</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>PermanentDisability</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>1</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>ValnDate</Name>
+      <Parent>prmRunSetupTbl</Parent>
+      <Previous>RunSetupTblPrm</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Date</DataType>
+      <Value>28/02/2025</Value>
+      <Format>dd/MM/yyyy</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source>Parent</Source>
+    </Parameter>
+    <Parameter>
+      <Name>prmRunSetupTbl</Name>
+      <Parent />
+      <Previous>SMLifelModelCF</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+      <Access>ReadOnly</Access>
+      <Source />
+    </Parameter>
+  </Params>
+  <Formulae>
+    <Formula>
+      <Name>AccidentalDeathBEL</Name>
+      <Parent>RiskBenefitsBEL</Parent>
+      <Previous>SurrenderBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return AccidentalDeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedAccidentalDeath(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Accidental_Death_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>AccidentalDeathUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>NaturalDeathUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+  Return  AccidentalDeathBEL(t + 1) - (AccidentalDeathBEL(t) + SMCoreModel.Accidental_Death_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>AcquisitionAAWBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>InitExpPercPremBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return AcquisitionAAWBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedAquisitionAAW(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.AcquisitionAAW_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>AcquisitionAAWUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>InitExpPercPremUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.193835+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.193835+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.193835+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  AcquisitionAAWBEL(t + 1) - (AcquisitionAAWBEL(t) + SMCoreModel.AcquisitionAAW_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>AcquisitionExpenses</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous>Claims</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return InitExpPerPolBEL(t) + InitExpPercPremBEL(t) + AcquisitionAAWBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>BalDate</Name>
+      <Parent>Time</Parent>
+      <Previous>ValMonth</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>
+'Return GetBalDate(t - PeriodIF(), SMCoreModel.ValnDate, StepsPY)
+Return SMCoreModel.BalDate(t)</Value>
+      <Format>dd/MM/yyyy</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CEPCBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>AcquisitionAAWBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return  CEPCBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedClaimExpPerClaim(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.CEPC_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CEPCUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>ClaimPercClaimAmtUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  CEPCBEL(t + 1) - (CEPCBEL(t) + SMCoreModel.ClaimExpPerClaim_func(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CU</Name>
+      <Parent />
+      <Previous>NonUnitBelComponents</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CUEntrepo</Name>
+      <Parent>CU</Parent>
+      <Previous>CU_Future_Service</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMCoreModel.Death_cover(t) + SMCoreModel.Funeral_cover(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CU_Current_Service</Name>
+      <Parent>CU</Parent>
+      <Previous>CU_func</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'If Date.FromOADate(ValDateStep(t)) = SMCoreModel.NextValnDate Then
+If Date.FromOADate(SMCoreModel.BalDate(t)) = SMCoreModel.NextValnDate Then
+    Return CU_func(t)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CU_Future_Service</Name>
+      <Parent>CU</Parent>
+      <Previous>FutureServiceCU</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'If Date.FromOADate(BalDate(t)) = SMCoreModel.NextValnDate Then
+'    Return FutureServiceCU(t)
+'End If
+
+If ValMonth(t) = 0 Then
+    Return FutureServiceCU(t)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CU_func</Name>
+      <Parent>CU</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If ValMonth(t) = 0
+    Return 0
+Else If t &lt; ProjTerm()  
+Return (Math.Max(Math.Max(SMCoreModel.Accidental_Death_cover(t), SMCoreModel.Natural_Death_cover(t)), Math.Max(SMCoreModel.Terminal_Illness_cover(t), SMCoreModel.Temporary_Disability_cover(t))) + 
+       SMCoreModel.Death_cover(t) + SMCoreModel.Permanent_Disability_cover(t) + SMCoreModel.Retrenchment_cover(t) + SMCoreModel.Critical_Illness_cover(t) + SMCoreModel.Funeral_cover(t)) * SMCoreModel.Healthy_PRO(t - 1)
+Else 
+    Return 0
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CashBackBEL</Name>
+      <Parent>RiskBenefitsBEL</Parent>
+      <Previous>DeathBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return CashBackBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedCashbackBenefit(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Cashback_Benefits_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CashBackUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  CashBackBEL(t + 1) - (CashBackBEL(t) + SMCoreModel.Periodic_CashBack_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ClaimPercClaimAmtBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>FuneralBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return ClaimPercClaimAmtBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedClaimPercClaimAmt(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.ClaimExpPercClaimAmt_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ClaimPercClaimAmtUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>AcquisitionAAWUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1948403+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1948403+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1948403+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  ClaimPercClaimAmtBEL(t + 1) - (ClaimPercClaimAmtBEL(t) + SMCoreModel.ClaimExpPercClaimAmt_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Claims</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous>PremiumsFinal</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return DeathBEL(t) + 
+AccidentalDeathBEL(t) + 
+NaturalDeathBEL(t) + 
+PermanentDisabilityBEL(t) + 
+TerminalIllnessBEL(t) + 
+TemporaryDisabilityBEL(t) + 
+RetrenchmentBEL(t) + 
+CriticalIllnessBEL(t) + 
+FuneralBEL(t) + 
+CashBackBEL(t) + 
+SurrenderBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Comission</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous>RenewalExpenses</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return ComissionBEL(t) + ComissionClawbackBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ComissionBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>PercCUexpenseBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return ComissionBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedComission(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Comission_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ComissionClawbackBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>ComissionBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return ComissionClawbackBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedComissionClawback(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.ComissionClawback_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ComissionClawbackUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>CommissionUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  ComissionClawbackBEL(t + 1) - (ComissionClawbackBEL(t) + SMCoreModel.Comission_Clawback_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CommissionUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>InitExpPerPolUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return  ComissionBEL(t + 1) - (ComissionBEL(t) + SMCoreModel.Renewal_Comission_func(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CriticalIllnessBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>PermanentDisabilityBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return CriticalIllnessBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedCriticalIllness(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Critical_Illness_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CriticalIllnessUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>TerminalIllnessUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()  
+  Return  CriticalIllnessBEL(t + 1) - (CriticalIllnessBEL(t) + SMCoreModel.Critical_Illness_cover(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>CurveNames</Name>
+      <Parent>RunSetUp</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>DeathBEL</Name>
+      <Parent>RiskBenefitsBEL</Parent>
+      <Previous>PremiumsBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return DeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedDeath(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Death_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Fees&amp;ExpensesUnwind</Name>
+      <Parent>Unwind</Parent>
+      <Previous>RiskBenefitUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>FuneralBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>RetrenchmentBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return FuneralBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedFuneral(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Funeral_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>FuneralCoverUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>SurrenderUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()   
+   Return  FuneralBEL(t + 1) - (FuneralBEL(t) + SMCoreModel.Funeral_cover(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>FutureServiceCU</Name>
+      <Parent>CU</Parent>
+      <Previous>CU_Current_Service</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1958451+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1958451+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1958451+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return FutureServiceCU(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + CU_func(t + 1)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>GrossBEL</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return PremiumsFinal(t) + RenewalExpenses(t) + Comission(t) + AcquisitionExpenses(t) + Claims(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Inf_input</Name>
+      <Parent>CurveNames</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Return SMCoreModel.Inf_input()</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>InitExpPerPolBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>ComissionClawbackBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return InitExpPerPolBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedInitExpensePP(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.InitialExpensePP_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>InitExpPerPolUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>PercCUExpenseUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  InitExpPerPolBEL(t + 1) - (InitExpPerPolBEL(t) + SMCoreModel.InitialExpPP_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>InitExpPercPremBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>InitExpPerPolBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return InitExpPercPremBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedInitExpPerPrem(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Retrenchment_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>InitExpPercPremUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>ComissionClawbackUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  InitExpPercPremBEL(t + 1) - (InitExpPercPremBEL(t) + SMCoreModel.InitialExpPercPremium_func(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NOM_input</Name>
+      <Parent>CurveNames</Parent>
+      <Previous>Inf_input</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>String</DataType>
+      <Value>Return SMCoreModel.NOM_input()</Value>
+      <Format />
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NaturalDeathBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return NaturalDeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedNaturalDeath(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Natural_Death_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NaturalDeathUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>TemporaryDisabilityUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()  
+    Return  NaturalDeathBEL(t + 1) - (NaturalDeathBEL(t) + SMCoreModel.Natural_Death_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NonUnitBOMBELComponents</Name>
+      <Parent>NonUnitBelComponents</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NonUnitBelComponents</Name>
+      <Parent />
+      <Previous>ReinsuranceBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NonUnitEOMBELComponents</Name>
+      <Parent>NonUnitBelComponents</Parent>
+      <Previous>NonUnitBOMBELComponents</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>NonUnitReserves</Name>
+      <Parent />
+      <Previous>Time</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PPEBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return PPEBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedPPE(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.PPE_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PPEUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>CashBackUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  PPEBEL(t + 1) - (PPEBEL(t) + SMCoreModel.Per_pol_exp_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PercCUExpenseUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>PercPremExpenseUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  PercCUexpenseBEL(t + 1) - (PercCUexpenseBEL(t) + SMCoreModel.Perc_CU_exp_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PercCUexpenseBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>PercPremExpenseBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return PercCUexpenseBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedPercCUExpense(t + 1) * (1 + fnRiskDiscountRate(t)) ^ (-SMCoreModel.PercCUExpense_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PercPremExpenseBEL</Name>
+      <Parent>NonUnitBOMBELComponents</Parent>
+      <Previous>PPEBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return PercPremExpenseBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedPercPremExpense(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.PercPremiumExpense_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PercPremExpenseUnwind</Name>
+      <Parent>Fees&amp;ExpensesUnwind</Parent>
+      <Previous>PPEUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  PercPremExpenseBEL(t + 1) - (PercPremExpenseBEL(t) + SMCoreModel.Perc_premium_exp_func(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PeriodIF</Name>
+      <Parent>Time</Parent>
+      <Previous>BalDate</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>'Return DateSpan.TermInMonths(SMCoreModel.CoverStartDate, SMCoreModel.ValuationDate)
+Return SMCoreModel.PeriodIF()</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PermanentDisabilityBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>TemporaryDisabilityBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.196844+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.196844+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.196844+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return PermanentDisabilityBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedPermanentDisability(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Permanent_Disability_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PermenentDisabilityUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>CriticalIllnessUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return PermanentDisabilityBEL(t + 1) - (PermanentDisabilityBEL(t) + SMCoreModel.Permanent_Disability_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PremiumsBEL</Name>
+      <Parent>RiskBenefitsBEL</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return PremiumsBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedPremiums(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Premiums_t_discounting)
+End If</Value>
+      <Format>#,##0.00000</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PremiumsFinal</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous>GrossBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return PremiumsBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PremiumsUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>AccidentalDeathUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'Return NextValPVPremiums(t) - (PVPremiums(t) + PVPremiumRelease(t))
+If t &lt; ProjTerm()
+   Return  PremiumsBEL(t + 1) - (PremiumsBEL(t) + SMCoreModel.PremiumCF(t))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ProjTerm</Name>
+      <Parent>Time</Parent>
+      <Previous>PeriodIF</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Integer</DataType>
+      <Value>Return SMCoreModel.ProjTerm</Value>
+      <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIAccidentalDeathBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RIAccidentalDeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.AccidentalDeathRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIAccidentalDeathUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  RIAccidentalDeathBEL(t + 1) - (RIAccidentalDeathBEL(t) + SMCoreModel.AccidentalDeathRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RICU</Name>
+      <Parent>CU</Parent>
+      <Previous>CUEntrepo</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return (Math.Max(Math.Max(SMCoreModel.AccidentalDeathRICover(t), SMCoreModel.NaturalDeathRICover(t)), Math.Max(SMCoreModel.TerminalIllnessRICover(t), SMCoreModel.TemporaryDisabilityRICover(t))) + 
+       SMCoreModel.DeathRICover(t) + SMCoreModel.PermanentDisabilityRICover(t) + SMCoreModel.RetrenchmentRICover(t) + SMCoreModel.CriticalIllnessRICover(t) + SMCoreModel.FuneralRICover(t)) * SMCoreModel.Healthy_PRO(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RICriticalIllnessBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RIRetrenchmentBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RICriticalIllnessBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.CriticalIllessRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RICriticalIllnessUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RIRetrenchmentUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  RICriticalIllnessBEL(t + 1) - (RICriticalIllnessBEL(t) + SMCoreModel.CriticalIllnessRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIDeathBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RIAccidentalDeathBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RIDeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.DeathRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIDeathUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RIAccidentalDeathUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  RIDeathBEL(t + 1) - (RIDeathBEL(t) + SMCoreModel.DeathRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIFuneralBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RICriticalIllnessBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RIFuneralBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.FuneralRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIFuneralUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RICriticalIllnessUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1982215+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1982215+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1982215+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+  Return  RIFuneralBEL(t + 1) - (RIFuneralBEL(t) + SMCoreModel.FuneralRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIFutureServiceCU</Name>
+      <Parent>CU</Parent>
+      <Previous>RICU</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return RIFutureServiceCU(t + 1) * (1 + fnRiskDiscountRate(t)) ^ (-1) + RICU(t)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RINaturalDeathBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RIDeathBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RINaturalDeathBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.NaturalDeathRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RINaturalDeathUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RIDeathUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  RINaturalDeathBEL(t + 1) - (RINaturalDeathBEL(t) + SMCoreModel.NaturalDeathRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIPermanentDisabilityBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RINaturalDeathBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RIPermanentDisabilityBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.PermanentDisRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIPermanentDisabilityUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RINaturalDeathUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  RIPermanentDisabilityBEL(t + 1) - (RIPermanentDisabilityBEL(t) + SMCoreModel.PermanentDisabilityRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIRetrenchmentBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RITemporaryDisabilityBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RIRetrenchmentBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.RetrenchmentRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RIRetrenchmentUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RITemporaryDisabilityUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  RIRetrenchmentBEL(t + 1) - (RIRetrenchmentBEL(t) + SMCoreModel.RetrenchmentRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RITemporaryDisabilityBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RITerminalIllnessBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RITemporaryDisabilityBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.TemporaryDisabilityRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RITemporaryDisabilityUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RITerminalIllnessUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+Return  RITemporaryDisabilityBEL(t + 1) - (RITemporaryDisabilityBEL(t) + SMCoreModel.TemporaryDisabilityRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RITerminalIllnessBEL</Name>
+      <Parent>ReinsuranceBEL</Parent>
+      <Previous>RIPermanentDisabilityBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>'No reinsurance t_discounting
+If t &lt; ProjTerm()
+    Return RITerminalIllnessBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.TerminalIllnessRIRecoveries(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-0)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RITerminalIllnessUnwind</Name>
+      <Parent>ReinsuranceUnwind</Parent>
+      <Previous>RIPermanentDisabilityUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+  Return  RITerminalIllnessBEL(t + 1) - (RITerminalIllnessBEL(t) + SMCoreModel.TerminalIllnessRICover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ReinsuranceBEL</Name>
+      <Parent />
+      <Previous>RiskBenefitsBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ReinsuranceUnwind</Name>
+      <Parent>Unwind</Parent>
+      <Previous>Fees&amp;ExpensesUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RenewalExpenses</Name>
+      <Parent>NonUnitReserves</Parent>
+      <Previous>AcquisitionExpenses</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1992273+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1992273+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.1992273+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return PPEBEL(t) + PercPremExpenseBEL(t) + PercCUexpenseBEL(t) + CEPCBEL(t) + ClaimPercClaimAmtBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RetrenchmentBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>TerminalIllnessBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return RetrenchmentBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedRetrenchment(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Retrenchment_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RetrenchmentUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>FuneralCoverUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  RetrenchmentBEL(t + 1) - (RetrenchmentBEL(t) + SMCoreModel.Retrenchment_cover(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RiskBenefitUnwind</Name>
+      <Parent>Unwind</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RiskBenefitsBEL</Name>
+      <Parent />
+      <Previous>RiskDiscountRate</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RiskDiscountRate</Name>
+      <Parent />
+      <Previous>NonUnitReserves</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>RunSetUp</Name>
+      <Parent />
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>SurrenderBEL</Name>
+      <Parent>RiskBenefitsBEL</Parent>
+      <Previous>CashBackBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return SurrenderBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedSurrender(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Surrender_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>SurrenderUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+   Return  SurrenderBEL(t + 1) - (SurrenderBEL(t) + SMCoreModel.Surrender_cover_factor(t + 1))
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>TemporaryDisabilityBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>NaturalDeathBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return TemporaryDisabilityBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedTemporaryDisability(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Temporary_Disability_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>TemporaryDisabilityUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>PermenentDisabilityUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return  TemporaryDisabilityBEL(t + 1) - (TemporaryDisabilityBEL(t) + SMCoreModel.Temporary_Disability_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>TerminalIllnessBEL</Name>
+      <Parent>NonUnitEOMBELComponents</Parent>
+      <Previous>CriticalIllnessBEL</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()
+    Return TerminalIllnessBEL(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-1) + SMLifelModelCF.ExpectedTerminalIllness(t + 1) * (1 + fnRiskDiscountRate(t + 1)) ^ (-SMCoreModel.Terminal_Illness_t_discounting)
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>TerminalIllnessUnwind</Name>
+      <Parent>RiskBenefitUnwind</Parent>
+      <Previous>RetrenchmentUnwind</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt; ProjTerm()     
+    Return  TerminalIllnessBEL(t + 1) - (TerminalIllnessBEL(t) + SMCoreModel.Terminal_Illness_cover(t + 1))
+End If </Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Time</Name>
+      <Parent />
+      <Previous>RunSetUp</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2002296+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2002296+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2002296+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>Unwind</Name>
+      <Parent />
+      <Previous>CU</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2012283+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2012283+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-14T13:31:23.2012283+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ValMonth</Name>
+      <Parent>Time</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2012283+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2012283+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2012283+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return t - PeriodIF()</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>fnRiskDiscountRate</Name>
+      <Parent>RiskDiscountRate</Parent>
+      <Previous />
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.2012283+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.2012283+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-14T13:31:23.2012283+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>If t &lt;= ProjTerm()
+    If SMCoreModel.NonUnit_discount_perc_source = SMCoreModel.Single_rate Then
+        Return (1 + SMCoreModel.NonUnit_discount_perc + SMCoreModel.Investment_expense_perc + SMCoreModel.Int_margin_ind * SMCoreModel.Int_margin_val) ^ (1 / 12) - 1
+    Else
+        Return (1 + Economic_curves.Value(Date.FromOADate(BalDate(t)), SMCoreModel.NOM_input()) + SMCoreModel.Investment_expense_perc + SMCoreModel.Int_margin_ind * SMCoreModel.Int_margin_val) ^ (1 / 12) - 1
+End If
+End If</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+  </Formulae>
+  <Runs />
+</Model>

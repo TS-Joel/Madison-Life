@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>AnnuityReportingGrp</Name>
+  <Parent>Annuity</Parent>
+  <Previous>AnnuityReportInd</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.2886426+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.2886426+02:00</CreatedOn>
+  <Key>MPRunAnnuityReporting_Grp</Key>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.2886426+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>false</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>Results\Annuity</ResultsFolder>
+  <DebugInfo>false</DebugInfo>
+  <ReThrowException>false</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <DebugRecordId />
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>false</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>2</ParallelSplits>
+  <Threads>20</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <Code>Overrides Sub RunCode(Optional OutputResults As Boolean = True)
+    
+    ' Configure result grouping
+'    DefineGrouping(Function(var) "ProductName = " &amp; var.ProductName)
+'    DefineGrouping(Function(var) {"ProductName = " &amp; var.ProductName, "PolicyStatus = " &amp; var.PolicyStatus}, 1)
+    DefineGrouping(Function(var) {"ProductName = " &amp; var.ProductName, "Cohort = " &amp; var.InceptionYRCohort}, 1)
+    
+    ' Configure result delimiter
+    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(9)
+'    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(44)
+    
+'    ' Configure result output for this task.
+'    ResultOptions.Apply(WriteTypes.Records, Me)
+'    ResultOptions.Apply(1, WriteTypes.None, Me)
+    
+    ExecuteRecords(OutputResults)
+    If OutputResults Then ReferencedProjections.WriteResults()
+End Sub</Code>
+  <ModelName>AnnuityModelReporting</ModelName>
+  <Basis />
+  <InputsTable>
+    <Name>MPRunAnnuityReporting_Inputs</Name>
+    <Parent />
+    <Previous />
+    <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+    <LastModifiedOn>2026-08-14T13:31:23.2886426+02:00</LastModifiedOn>
+    <CreatedBy>KyawSoeThein</CreatedBy>
+    <CreatedOn>2026-08-14T13:31:23.2886426+02:00</CreatedOn>
+    <Folder>false</Folder>
+    <LastModified>2026-08-14T13:31:23.2886426+02:00</LastModified>
+    <Notes />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>DataManager</FilePath>
+    <Schema />
+    <Reference>Mad_Annuity</Reference>
+    <Delimiter>	</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>RowAndCol</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>1</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>2</Rows>
+    <Cols>65</Cols>
+    <ColWidths>191;80;125;108;91;77;81;75;267;108;171;171;121;121;121;100;74;77;63;72;69;59;103;58;111;115;113;139;89;123;125;100;88;71;69;125;114;75;82;95;102;107;86;92;89;82;97;97;77;83;108;116;66;112;64;37;38;38;100;85;116;65;69;171;85;85;85;85;85;85;85;85;92;84;94;93;104;143;153;45;92;99;153;175;176;232;137;159;160;216;104;96;118;99;173;195;235;172;194;235;144;166;207;134;156;197;141;163;203;71;122;113;114;83;112;114;80;97;124;139;143;106;85;76;117;129;123;140;130;218;150;101;79;123;84;122;91;130;96;56;105;53;55;104;118;104;63;112;60;126;112;57;106;120;106;60;109;57;123;109;60;109;46;95;43;83;132;80;68;117;65;60;72;78;116;128;113;154;99;54;66;109;176;127;110;56;101;150;146;168;57;50;55;94;74;87;75;93;91;96;87;100;106;111;97;116;90</ColWidths>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties />
+  <InputOverrides>true</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>false</ReadFromFileIfAvailable>
+  <ProjectionInputs />
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>240</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>240</ColumnSumEnd>
+  <PerRecordResults>true</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput>ValDateStep, PolSequence, ProductName, GrossBEL, PVAcquisitionExpenses, PVBenefits, PVClaims, PVPremiums, PVRenewalExpenses, SumAssured, SinglePremium, Frequency</CustomRecordOutput>
+  <Delimiter>Comma</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>

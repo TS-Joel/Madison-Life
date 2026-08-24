@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<DataConversion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>WPEndowReportGrp</Name>
+  <Parent>WithProfitEndow</Parent>
+  <Previous>WPEndowReportInd</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.3004361+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.3004361+02:00</CreatedOn>
+  <Key>MPRunWPEndowReporting</Key>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.3004361+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <Type>Indiv</Type>
+  <UseDefaultFolder>false</UseDefaultFolder>
+  <UseDataSource>false</UseDataSource>
+  <ResultsFolder>Results\Endowment</ResultsFolder>
+  <DebugInfo>true</DebugInfo>
+  <ReThrowException>false</ReThrowException>
+  <ExceptionWriteMax>20</ExceptionWriteMax>
+  <ExceptionAbortMax>1000</ExceptionAbortMax>
+  <EnableDebugRecordId>false</EnableDebugRecordId>
+  <DebugRecordId />
+  <TableSplitDelimiter>_</TableSplitDelimiter>
+  <WorkerPCs>false</WorkerPCs>
+  <MultiThreaded>true</MultiThreaded>
+  <IsHpcRun>false</IsHpcRun>
+  <ThreadsEvenSplit>true</ThreadsEvenSplit>
+  <ParallelSplits>2</ParallelSplits>
+  <Threads>20</Threads>
+  <SequentialStartUp>false</SequentialStartUp>
+  <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
+  <NumberOfWorkers>0</NumberOfWorkers>
+  <StartUpDelay>0</StartUpDelay>
+  <BackupAfterRun>false</BackupAfterRun>
+  <IncludeResultsInBackup>false</IncludeResultsInBackup>
+  <RevisionIds />
+  <MaxRunDuration>0</MaxRunDuration>
+  <Code>Overrides Sub RunCode(Optional OutputResults As Boolean = True)
+    
+    ' Configure result grouping
+'    DefineGrouping(Function(var) "ProductName = " &amp; var.ProductName)
+'    DefineGrouping(Function(var) {"ProductName = " &amp; var.ProductName, "PolicyStatus = " &amp; var.PolicyStatus}, 1)
+    DefineGrouping(Function(var) {"ProductName = " &amp; var.ProductName, "Cohort = " &amp; var.InceptionYRCohort}, 1)
+    
+    ' Configure result delimiter
+'    GenCore.WriteProjectionResults.DefaultDelimiter = Chr(9)
+   GenCore.WriteProjectionResults.DefaultDelimiter = Chr(44)
+    
+'    ' Configure result output for this task
+'    ResultOptions.Apply(WriteTypes.Records, Me)
+'    ResultOptions.Apply(1, WriteTypes.None, Me)
+'    
+    ExecuteRecords(OutputResults)
+    If OutputResults Then ReferencedProjections.WriteResults()
+End Sub</Code>
+  <ModelName>WPEndowModelReporting</ModelName>
+  <Basis />
+  <InputsTable>
+    <Name>MPRunWPEndowReserving_Inputs</Name>
+    <Parent />
+    <Previous />
+    <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+    <LastModifiedOn>2026-08-14T13:31:23.2994365+02:00</LastModifiedOn>
+    <CreatedBy>KyawSoeThein</CreatedBy>
+    <CreatedOn>2026-08-14T13:31:23.2994365+02:00</CreatedOn>
+    <Folder>false</Folder>
+    <LastModified>2026-08-14T13:31:23.2994365+02:00</LastModified>
+    <Notes />
+    <IsExpanded>true</IsExpanded>
+    <IsProjectTable>false</IsProjectTable>
+    <IsDataSource>false</IsDataSource>
+    <IsODBCSource>false</IsODBCSource>
+    <IsWebDataSource>false</IsWebDataSource>
+    <IsDatFileSource>false</IsDatFileSource>
+    <IsDatabaseConnection>false</IsDatabaseConnection>
+    <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+    <FilePath>DataManager</FilePath>
+    <Schema />
+    <Reference>Mad_AllEndow_MPFs</Reference>
+    <Delimiter>	</Delimiter>
+    <Internal>false</Internal>
+    <LookUpType>RowAndCol</LookUpType>
+    <BasisTable>false</BasisTable>
+    <IndexCols>1</IndexCols>
+    <DoubleType>true</DoubleType>
+    <Rows>2</Rows>
+    <Cols>2</Cols>
+    <ColWidths>229;80;125;108;76;75;69;108;263;114;263;121;121;74;72;63;72;69;72;82;103;112;105;86;111;115;113;139;89;123;125;100;88;71;69;125;114;75;95;102;107;92;87;72;105;89;97;83;108;116;66;92;109;100;85;116;263;85;85;85;85;85;85;84;45;92;99;153;176;232;137;160;216;104;72;127;145;116;91;158;175;114;96;118;99;173;196;167;213;152;235;172;235;144;207;134;197;141;203;71;122;113;114;83;112;114;101;102;97;78;116;139;143;106;76;117;129;123;140;130;218;101;147;118;164;103;137;136;107;153;92;126;94;109;80;129;65;99;79;123;56;105;55;104;63;112;57;106;60;109;60;109;46;95;83;132;68;117;60;87;99;54;176;127;110;56;101;150;146;168;72;83;29;86;99;120;98;103;114;120;85;96;81;67;67;129;107;186;189;197;175;163;156;193;164;191;120;195;93;143;94;104;153;103;241;251;157</ColWidths>
+    <HasHeadings>true</HasHeadings>
+    <RunControlTable>false</RunControlTable>
+  </InputsTable>
+  <CopyProperties />
+  <InputOverrides>true</InputOverrides>
+  <ParameterOverrides>false</ParameterOverrides>
+  <ReadFromFileIfAvailable>false</ReadFromFileIfAvailable>
+  <ProjectionInputs />
+  <Dynamic>false</Dynamic>
+  <UseDynamicAttributes>false</UseDynamicAttributes>
+  <ColumnOutputTotals>true</ColumnOutputTotals>
+  <ColumnOutputStart>0</ColumnOutputStart>
+  <ColumnOutputEnd>240</ColumnOutputEnd>
+  <ColumnSumTotals>true</ColumnSumTotals>
+  <ColumnSumStart>0</ColumnSumStart>
+  <ColumnSumEnd>240</ColumnSumEnd>
+  <PerRecordResults>true</PerRecordResults>
+  <SuppressRecordIndices>false</SuppressRecordIndices>
+  <CustomRecordOutput>PolSequence, ProductName, GrossBEL, PVAcquisitionExpenses, PVClaims, PVComission, PVRenewalExpenses, PVPremiums, Premium, SumAssured, PremiumWithFrequency, Frequency, Accidental_Death_cover, Accidental_Death_Fam_cover, AccidentalDeathBEL, AccidentalDeathFamRICover, AccidentalDeathRICover, AccidentalDeathUnwind_WP, AcquisitionAAW_func, AcquisitionAAWUnwind_WP, AmtInvestedBEL_WP, AnnuityBEL_WP, Cashback_cover, CashBackBEL, CashBackUnwind_WP, CEPCUnwind_WP, ClaimExpPercClaimAmt_func, ClaimExpPerClaim_func, ClaimPercClaimAmtUnwind_WP, Comission_Clawback_func, Comission_func, ComissionClawbackUnwind_WP, Comm_Perc_func, CommissionUnwind_WP, CoverStartDate, Critical_Illness_cover, CriticalIllnessBEL_WP, CriticalIllnessRICover, CriticalIllnessUnwind_WP, CU_Current_Service_WP, CU_func_WP, CU_Future_Service_WP, CUEntrepo_WP, Death_cover, DeathBEL, DeathRICover, fnRiskDiscountRate, Funeral_cover, FuneralBEL_WP, FuneralCoverUnwind_WP, FuneralRICover, FutureServiceCU_WP, GuaranteedOEInterestBEL_WP, InitExpPercPremUnwind_WP, InitExpPerPolUnwind_WP, InitialExpPercPremium_func, InitialExpPP_func, LumpsumDeathBEL_WP, MaturityBEL, Natural_Death_cover, Natural_Death_Fam_cover, NaturalDeathBEL_WP, NaturalDeathFamRICover, NaturalDeathRICover, NaturalDeathUnwind_WP, OEValueBOMBEL_WP, OEValueEOMBEL_WP, PaidUpBEL_WP, PartialSurrenderBEL_WP, Per_pol_exp_func, Perc_CU_exp_func, Perc_premium_exp_func, PercCUExpenseUnwind_WP, PercPremExpenseUnwind_WP, PeriodIF, Permanent_Disability_cover, PermanentDisabilityBEL_WP, PermanentDisabilityRICover, PermenentDisabilityUnwind_WP, PPEUnwind_WP, PremiumCF, PremiumsBEL, PremiumsUnwind_WP, ProductName_output, ProjTerm, Retrenchment_cover, RetrenchmentBEL_WP, RetrenchmentRICover, RetrenchmentUnwind_WP, RIAccidentalDeathBEL_WP, RIAccidentalDeathUnwind_WP, RICriticalIllnessBEL_WP, RICriticalIllnessUnwind_WP, RICU_WP, RIDeathBEL_WP, RIDeathUnwind_WP, RIFuneralBEL_WP, RIFuneralUnwind_WP, RIFutureServiceCU_WP, RINaturalDeathBEL_WP, RINaturalDeathUnwind_WP, RIPermanentDisabilityBEL_WP, RIPermanentDisabilityUnwind_WP, RIPremiums, RIRetrenchmentBEL_WP, RIRetrenchmentUnwind_WP, RITemporaryDisabilityBEL_WP, RITemporaryDisabilityUnwind_WP, RITerminalIllnessBEL_WP, RITerminalIllnessUnwind_WP, Surrender_cover, SurrenderBEL, SurrenderUnwind_WP, Temporary_Disability_cover, TemporaryDisabilityBEL_WP, TemporaryDisabilityRICover, TemporaryDisabilityUnwind_WP, Terminal_Illness_cover, TerminalIllnessBEL_WP, TerminalIllnessRICover, TerminalIllnessUnwind_WP, ValDateStep, ValMonth, WOPBEL</CustomRecordOutput>
+  <Delimiter>Comma</Delimiter>
+  <Targets />
+  <MaxTerm>1200</MaxTerm>
+  <CircularReferenceCheck>false</CircularReferenceCheck>
+  <ResetParamDefaults>false</ResetParamDefaults>
+  <SuppressVariableValidation>false</SuppressVariableValidation>
+  <ApplyGrouping>false</ApplyGrouping>
+  <ApplySorting>false</ApplySorting>
+  <ApplyMergeTest>false</ApplyMergeTest>
+  <Threshold>0</Threshold>
+  <ThreshholdType>None</ThreshholdType>
+  <IsDataConversion>false</IsDataConversion>
+</DataConversion>
