@@ -4,11 +4,11 @@
   <Parent>SubLayer4</Parent>
   <Previous>LifeModelReporting</Previous>
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T16:54:50.3432533+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-25T17:12:27.9249857+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0492586+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T16:54:50.3432533+02:00</LastModified>
+  <LastModified>2026-08-25T17:12:27.9249857+02:00</LastModified>
   <Notes />
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -1290,13 +1290,13 @@ End If</Value>
     <Formula>
       <Name>NonUnitBelComponents</Name>
       <Parent />
-      <Previous>X_Added</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0552578+02:00</LastModifiedOn>
+      <Previous>NonUnitReserves</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T17:12:27.9239907+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0552578+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0552578+02:00</LastModified>
+      <LastModified>2026-08-25T17:12:27.9239907+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -1732,186 +1732,6 @@ Return SMCoreModel.BalDate(t)</Value>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return t - PeriodIF()</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Added</Name>
-      <Parent />
-      <Previous>NonUnitReserves</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0562575+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0562575+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0562575+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMAnnuityModelReserving.AnnuityBEL(t) </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_BEL1</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_Annuity_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMAnnuityModelReserving.AnnuityBonusBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMAnnuityModelCF.ExpectedAnnuity(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_CF1</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_Annuity_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMAnnuityModelCF.ExpectedAnnuityBonus(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_Cover</Name>
-      <Parent>X_Cover</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Annuity_cover(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Annuity_Cover1</Name>
-      <Parent>X_Cover</Parent>
-      <Previous>X_Annuity_Cover</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.AnnuityBonus_cover(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_BEL</Name>
-      <Parent>X_Added</Parent>
-      <Previous />
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T16:54:50.3432533+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-25T16:54:50.3432533+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_CF</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_BEL</Previous>
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T15:51:32.7970433+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-25T15:51:32.7970433+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Cover</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>

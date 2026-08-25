@@ -4,11 +4,11 @@
   <Parent>SubLayer4</Parent>
   <Previous />
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T16:53:44.9449853+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-25T17:12:27.9279932+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.131088+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T16:53:44.9449853+02:00</LastModified>
+  <LastModified>2026-08-25T17:12:27.9279932+02:00</LastModified>
   <Notes>Reporting model layer - contains the user defined output required for reporting. Output can be selected from any other sub-model layer.</Notes>
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -2124,7 +2124,7 @@ End If</Value>
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1380728+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -2485,7 +2485,7 @@ Return SMCoreModel.PeriodIF()</Value>
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1390728+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -3441,7 +3441,7 @@ Return SMCoreModel.PeriodIF()</Value>
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.143071+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -3451,13 +3451,13 @@ Return SMCoreModel.PeriodIF()</Value>
     <Formula>
       <Name>UndecrementedCashflows</Name>
       <Parent />
-      <Previous>X_Added</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.143071+02:00</LastModifiedOn>
+      <Previous>NonUnitReserves</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T17:12:27.9249857+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.143071+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.143071+02:00</LastModified>
+      <LastModified>2026-08-25T17:12:27.9249857+02:00</LastModified>
       <Notes />
       <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
@@ -3518,349 +3518,6 @@ Return SMCoreModel.BalDate(t)</Value>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return SMFuneralModelReserving.ValMonth(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Added</Name>
-      <Parent />
-      <Previous>NonUnitReserves</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.143071+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.143071+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.143071+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_BEL</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_Maturity_Count</Previous>
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T16:53:44.9449853+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.143071+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-25T16:53:44.9449853+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_CF</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_BEL</Previous>
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T15:51:32.8010435+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.143071+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-25T15:51:32.8010435+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Clawback_Cover</Name>
-      <Parent>X_Cover</Parent>
-      <Previous>X_Death_Cover</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.143071+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.143071+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.143071+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If X_CommClaw_CF(t) &lt;&gt; 0 Then Return - 1 * X_CommClaw_CF(t) / SMCoreModel.Surrenders_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_CommClaw_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_Commission_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.ComissionClawbackBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_CommClaw_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_Commission_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedComissionClawback(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Commission_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_Surrender_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.ComissionBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Commission_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_Surrender_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedComission(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Cover</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Death_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_Premium_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.FuneralBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Death_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_Premium_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedFuneral(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Death_Cover</Name>
-      <Parent>X_Cover</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>
-    Return SMCoreModel.Funeral_cover(t) * SMCoreModel.Healthy_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Expenses_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_CommClaw_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.PPEBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Expenses_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_CommClaw_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1440698+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1440698+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedPPE(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Maturity_Count</Name>
-      <Parent>X_Added</Parent>
-      <Previous />
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T16:53:39.0748198+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1440698+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-25T16:53:39.0748198+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If Maturity_PRO(t) &lt;&gt; 0 Then Return 1</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Premium_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1450705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1450705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1450705+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.PremiumsFinal(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Premium_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1450705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1450705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1450705+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedPremiums(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Surrender_BEL</Name>
-      <Parent>X_BEL</Parent>
-      <Previous>X_Death_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1450705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1450705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1450705+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelReserving.SurrenderBEL(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Surrender_CF</Name>
-      <Parent>X_CF</Parent>
-      <Previous>X_Death_CF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1450705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1450705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1450705+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.ExpectedSurrender(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>

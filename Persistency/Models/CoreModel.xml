@@ -4,11 +4,11 @@
   <Parent>SubLayer1</Parent>
   <Previous />
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T17:00:35.2574751+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-25T17:07:09.219413+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0651334+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T17:00:35.2574751+02:00</LastModified>
+  <LastModified>2026-08-25T17:07:09.219413+02:00</LastModified>
   <Notes>Core model layer - contains model point file inputs, parameters, tables and functions (decrements, undecremented cashflows and other source inputs).</Notes>
   <IsExpanded>true</IsExpanded>
   <Description>Core model layer</Description>
@@ -5764,7 +5764,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0875175+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>Cover_Trigger_Tbl</Value>
       <Format />
@@ -6386,7 +6386,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0895158+02:00</LastModified>
       <Notes>DataType: TableStr — Contains table references used for mapping decrement bases. Source: DecrementTableTbl — The data originates from the decrement table linking model assumptions.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>DecrementRateTbl</Value>
       <Format />
@@ -6629,7 +6629,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0905145+02:00</LastModified>
       <Notes>DataType: TableDbl — Contains inflation adjustment indicators applied to expense projections. Source: Expense_inf_ind — The values are sourced from the expense inflation indicator table defining annual uplift rates.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableDbl</DataType>
       <Value>Expense_inf_ind</Value>
       <Format />
@@ -12789,7 +12789,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12829,7 +12829,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12849,7 +12849,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -16139,12 +16139,12 @@ End If </Value>
       <Name>MortRate</Name>
       <Parent>ShockSetup</Parent>
       <Previous>MortalityCAT_ind</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1190693+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T17:07:09.219413+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1190693+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1190693+02:00</LastModified>
+      <LastModified>2026-08-25T17:07:09.219413+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
