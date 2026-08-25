@@ -4,11 +4,11 @@
   <Parent>SubLayer1</Parent>
   <Previous />
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T16:22:22.590863+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-25T17:00:35.2574751+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0651334+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T16:22:22.590863+02:00</LastModified>
+  <LastModified>2026-08-25T17:00:35.2574751+02:00</LastModified>
   <Notes>Core model layer - contains model point file inputs, parameters, tables and functions (decrements, undecremented cashflows and other source inputs).</Notes>
   <IsExpanded>true</IsExpanded>
   <Description>Core model layer</Description>
@@ -6386,7 +6386,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0895158+02:00</LastModified>
       <Notes>DataType: TableStr — Contains table references used for mapping decrement bases. Source: DecrementTableTbl — The data originates from the decrement table linking model assumptions.</Notes>
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>DecrementRateTbl</Value>
       <Format />
@@ -13886,6 +13886,34 @@ Return x * y</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>ClaimsImprovementsFn</Name>
+      <Parent>DecrementRates</Parent>
+      <Previous />
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T17:00:35.2574751+02:00</LastModifiedOn>
+      <CreatedBy>KyawSoeThein</CreatedBy>
+      <CreatedOn>2026-08-14T13:31:23.1160682+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-25T17:00:35.2574751+02:00</LastModified>
+      <Notes>This formula applies claim improvement factors over time based on product type and date ranges. It returns different multipliers depending on the date and product description.</Notes>
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>While t &lt;= ProjTerm()
+    If ValMonth(t) = 0 Then
+        Return 0
+    End If
+
+    If Mortality_improv_ind = 1
+       Return ((1 - Mortality_improv_ind * Mort_improv_vals) ^ (Int(ValMonth(t) / 12)))        
+    Else
+        Return 1.0
+    End If
+End While</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>Comission_Clawback_func</Name>
       <Parent>Fees&amp;Expenses</Parent>
       <Previous>Initial_Comission_Func</Previous>
@@ -14711,13 +14739,13 @@ Return Math.Min(x * ClaimsImprovementsFn(t) * CriticalIllnessMultiplicativeLoadi
     <Formula>
       <Name>DecrementLapsesFn</Name>
       <Parent>DecrementRates</Parent>
-      <Previous />
-      <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T16:22:22.590863+02:00</LastModifiedOn>
+      <Previous>ClaimsImprovementsFn</Previous>
+      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+      <LastModifiedOn>2026-08-14T13:31:23.1170674+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1170674+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-25T16:22:22.590863+02:00</LastModified>
+      <LastModified>2026-08-14T13:31:23.1170674+02:00</LastModified>
       <Notes>This formula calculates the lapse rate based on rating factors and a lookup table. It applies a sensitivity factor and caps the lapse rate at 1. It uses a different value for durations beyond 36 months.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
