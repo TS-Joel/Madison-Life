@@ -3,12 +3,12 @@
   <Name>FuneralModelReserving</Name>
   <Parent>SubLayer3</Parent>
   <Previous />
-  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-  <LastModifiedOn>2026-08-14T13:31:23.1450705+02:00</LastModifiedOn>
+  <LastModifiedBy>JoelGrosch</LastModifiedBy>
+  <LastModifiedOn>2026-08-25T12:34:14.4367673+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.1450705+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-14T13:31:23.1450705+02:00</LastModified>
+  <LastModified>2026-08-25T12:34:14.4367673+02:00</LastModified>
   <Notes>Reserving model layer - contains the present value of cash flows and discounting functionality</Notes>
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -1952,12 +1952,12 @@ End If </Value>
       <Name>ProjTerm</Name>
       <Parent>Time</Parent>
       <Previous>PeriodIF</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1630828+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T12:34:04.4025109+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1630828+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1630828+02:00</LastModified>
+      <LastModified>2026-08-25T12:34:04.4025109+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Integer</DataType>
@@ -2526,12 +2526,12 @@ End If</Value>
       <Name>RunSetUp</Name>
       <Parent />
       <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1650825+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T12:34:14.4358346+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1650825+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1650825+02:00</LastModified>
+      <LastModified>2026-08-25T12:34:14.4358346+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>

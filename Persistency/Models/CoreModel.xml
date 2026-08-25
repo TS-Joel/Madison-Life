@@ -3,12 +3,12 @@
   <Name>CoreModel</Name>
   <Parent>SubLayer1</Parent>
   <Previous />
-  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-  <LastModifiedOn>2026-08-14T13:31:23.0651334+02:00</LastModifiedOn>
+  <LastModifiedBy>JoelGrosch</LastModifiedBy>
+  <LastModifiedOn>2026-08-25T15:41:43.9337877+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0651334+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-14T13:31:23.0651334+02:00</LastModified>
+  <LastModified>2026-08-25T15:41:43.9337877+02:00</LastModified>
   <Notes>Core model layer - contains model point file inputs, parameters, tables and functions (decrements, undecremented cashflows and other source inputs).</Notes>
   <IsExpanded>true</IsExpanded>
   <Description>Core model layer</Description>
@@ -236,7 +236,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.0661314+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -559,7 +559,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.0671333+02:00</LastModified>
       <Notes>This input represents the cover amount for various insurance policies.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -5537,12 +5537,12 @@
       <Name>Comm_clawback_months</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Comm_clawback_within_pol_years</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0865158+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2897943+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0865158+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0865158+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2897943+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Integer</DataType>
@@ -5557,12 +5557,12 @@
       <Name>Comm_clawback_within_pol_years</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0865158+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0865158+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0865158+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -5577,12 +5577,12 @@
       <Name>Comm_term_split</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Renewal_comm_perc_prem</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0865158+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0865158+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0865158+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -5597,12 +5597,12 @@
       <Name>Commission_rates_tbl</Name>
       <Parent />
       <Previous>Commission_setup_tbl</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0865158+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:55:42.3977568+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0865158+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0865158+02:00</LastModified>
+      <LastModified>2026-08-24T14:55:42.3977568+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>TableDbl</DataType>
@@ -5617,12 +5617,12 @@
       <Name>Commission_setup_tbl</Name>
       <Parent />
       <Previous>Adult_Child_Loadings</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0865158+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2917926+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0865158+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0865158+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2917926+02:00</LastModified>
       <Notes />
       <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
@@ -5704,7 +5704,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0875175+02:00</LastModified>
       <Notes>DataType: TableStr — Contains source references or identifiers for cover amount derivations. Source: CoverAmtSource — The values are sourced from the Cover Amount Source table defining origin criteria.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>CoverAmtSource</Value>
       <Format />
@@ -6386,7 +6386,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0895158+02:00</LastModified>
       <Notes>DataType: TableStr — Contains table references used for mapping decrement bases. Source: DecrementTableTbl — The data originates from the decrement table linking model assumptions.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>DecrementRateTbl</Value>
       <Format />
@@ -6568,7 +6568,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0905145+02:00</LastModified>
       <Notes>DataType: TableDbl — Contains expense and commission assumption data for financial modeling. Source: ExpenseCommAsumptionsTbl — The data is derived from the expense and commission assumption table defining cost projections.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableDbl</DataType>
       <Value>ExpenseAsumptionsTbl</Value>
       <Format />
@@ -7123,12 +7123,12 @@
       <Name>Initial_comm_perc_method</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Initial_comm_period</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0925374+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0925374+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0925374+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>String</DataType>
@@ -7143,12 +7143,12 @@
       <Name>Initial_comm_period</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Comm_term_split</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0925374+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0925374+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0925374+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -7290,7 +7290,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.0935347+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableDbl</DataType>
       <Value>Joint_Contingent_Ind_Tbl</Value>
       <Format />
@@ -10636,12 +10636,12 @@
       <Name>Renewal_comm_perc_prem</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Renewal_comm_timing</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1050704+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1050704+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1050704+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -10656,12 +10656,12 @@
       <Name>Renewal_comm_timing</Name>
       <Parent>Commission_setup_tbl</Parent>
       <Previous>Comm_clawback_months</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1050704+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T14:08:49.2907939+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1050704+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1050704+02:00</LastModified>
+      <LastModified>2026-08-24T14:08:49.2907939+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>String</DataType>
@@ -12669,7 +12669,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableStr</DataType>
       <Value>WP_Bonus_tbl</Value>
       <Format />
@@ -12809,7 +12809,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12829,7 +12829,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12849,7 +12849,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12869,7 +12869,7 @@
       <Folder>false</Folder>
       <LastModified>2026-08-14T13:31:23.1140692+02:00</LastModified>
       <Notes>DataType: TableDbl — Stores the time-based discounting factors used for present value and projection calculations. Source: None — Represents the main discounting table providing time-indexed discount rates for actuarial and financial modeling.</Notes>
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>TableDbl</DataType>
       <Value>t_discounting</Value>
       <Format />
@@ -13083,34 +13083,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Accidental_Mortality_Fam_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Accidental_Mortality_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1140692+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1140692+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1140692+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to accidental death for family members. It uses the previous period's healthy policies and applies a monthly probability of decrement due to accidental death and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Accidental_Mortality_Fam_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementAccidentalMortalityFamFn(t) )) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Accidental_Mortality_PRO</Name>
       <Parent>PolicyRunOff</Parent>
       <Previous>Annuity_Mortality_PRO</Previous>
@@ -13130,32 +13102,6 @@ Else
      Return 0
     Else 
         Return Healthy_PRO(t - 1) * (1 - (1 - (DecrementAccidentalMortalityFn(t) + DecrementAIDSFn(t) * Accidental_Mortality_AIDS_ind)) ^ (1 / 12))
-    End If
-End If    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Accidental_Mortality_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Annuity_Mortality_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1140692+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1140692+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1140692+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to accidental death. It uses the previous period's healthy policies and applies a monthly probability of decrement due to accidental death and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Accidental_Mortality_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementAccidentalMortalityFn(t) )) ^ (1 / 12))
     End If
 End If    </Value>
       <Format>#,##0.00</Format>
@@ -13223,13 +13169,13 @@ Return x * y</Value>
     <Formula>
       <Name>AcquisitionAAW_sensitivity</Name>
       <Parent>Sensitivity</Parent>
-      <Previous>ClaimExpPercClaimAmt_sensitivity</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1140692+02:00</LastModifiedOn>
+      <Previous>ClaimExpPerClaim_sensitivity</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T16:49:50.0227421+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1140692+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1140692+02:00</LastModified>
+      <LastModified>2026-08-24T16:49:50.0227421+02:00</LastModified>
       <Notes>This formula returns the sensitivity factor for initial expense as a percentage of premium. It is used to test how results change under different expense assumptions.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -13502,32 +13448,6 @@ End If    </Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Annuity_Mortality_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Mortality_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1150704+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1150704+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1150704+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Annuity_Mortality_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementAnnuityMortalityFn(t) )) ^ (1 / 12))
-    End If
-End If    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Annuity_cover</Name>
       <Parent>Cover</Parent>
       <Previous>Annuity_death_cover</Previous>
@@ -13737,66 +13657,6 @@ Return x</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Apply_To_AnnuityExpenses_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Apply_To_Annuity_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1150704+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1150704+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1150704+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Dim x As Double
- 
-If ValMonth(t) = 0
-    x = 1
-End If
- 
-If AnnuityType = "ANNUITY SINGLE LIFE"  And (AnnuitantStatus = "P" Or AnnuitantStatus = Child Or AnnuitantStatus = "D") Then 
-    If lx_MainLife_PRO(t) &gt; 0 And AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else
-     x = lx_MainLife_PRO(t)
-    End If
-ElseIf  AnnuityType = "ANNUITY SINGLE LIFE" And AnnuitantStatus &lt;&gt; "P" Then   
-    If lx_MainLife_PRO(t) &gt; 0 And AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else
-     x = 0
-    End If
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And (AnnuitantStatus = "P" Or AnnuitantStatus = Married Or AnnuitantStatus = Suspended)
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else
-     x = lx_MainLife_PRO(t) * lx_Life2_PRO(t) + (1 - lx_Life2_PRO(t)) * lx_MainLife_PRO(t) + (1 - lx_MainLife_PRO(t)) * lx_Life2_PRO(t)
-    End If
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And AnnuitantStatus = "D"
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else 
-     x = lx_Life2_PRO(t)
-    End If   
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And AnnuitantStatus = Child
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t) And ChildMaxAge &gt;= Age(t)
-     x = 1
-    Else
-     x = 0
-    End If
-
-Else 
-    x = 0
-End If
- 
- 
-Return x</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Apply_To_Annuity_PRO</Name>
       <Parent>PolicyRunOff</Parent>
       <Previous>Maturity_PRO</Previous>
@@ -13828,64 +13688,6 @@ ElseIf  AnnuityType = "ANNUITY SINGLE LIFE" And AnnuitantStatus &lt;&gt; "P" The
      x = 0
     End If
 ElseIf AnnuityType = "ANNUITY JOINT LIFE" And (AnnuitantStatus = "P")
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else 
-     x = lx_MainLife_PRO(t) * lx_Life2_PRO(t) + (1 - lx_Life2_PRO(t)) * lx_MainLife_PRO(t) + ReversionaryPerc * (1 - lx_MainLife_PRO(t)) * lx_Life2_PRO(t)
-    End If
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And AnnuitantStatus = "D"
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else 
-     x = ReversionaryPerc * lx_Life2_PRO(t)
-    End If
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And AnnuitantStatus = Child
-    If AnnuityGuaranteePeriod * 12 &gt; DurIF(t) And ChildMaxAge &gt;= Age(t)
-     x = 1
-    Else
-     x = 0
-    End If
-Else
-x = 0
-End If
- 
-Return x</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Apply_To_Annuity_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Healthy_PRO_end</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1150704+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1150704+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1150704+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Dim x As Double
- 
-If ValMonth(t) = 0
-    x = 1
-End If
- 
-If AnnuityType = "ANNUITY SINGLE LIFE" And (AnnuitantStatus = "P" Or AnnuitantStatus = "D" ) Then 
-    If lx_MainLife_PRO(t) &gt; 0 And AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else
-     x = lx_MainLife_PRO(t)
-    End If
-ElseIf  AnnuityType = "ANNUITY SINGLE LIFE" And AnnuitantStatus &lt;&gt; "P" Then   
-    If lx_MainLife_PRO(t) &gt; 0 And AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
-     x = 1
-    Else
-     x = 0
-    End If
-ElseIf AnnuityType = "ANNUITY JOINT LIFE" And (AnnuitantStatus = "P" Or AnnuitantStatus = "D")
     If AnnuityGuaranteePeriod * 12 &gt; DurIF(t)
      x = 1
     Else 
@@ -14068,13 +13870,13 @@ Return x * y</Value>
     <Formula>
       <Name>ClaimExpPercClaimAmt_sensitivity</Name>
       <Parent>Sensitivity</Parent>
-      <Previous>ClaimExpPerClaim_sensitivity</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1160682+02:00</LastModifiedOn>
+      <Previous>Terminal_Illness_sensitivity</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T16:49:50.0259678+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1160682+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1160682+02:00</LastModified>
+      <LastModified>2026-08-24T16:49:50.0259678+02:00</LastModified>
       <Notes>This formula returns the sensitivity factor for initial expense as a percentage of premium. It is used to test how results change under different expense assumptions.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -14265,33 +14067,6 @@ Else
      Return 0
     Else 
         Return Healthy_PRO(t - 1) * (1 - (1 - (DecrementCriticalIllnessFn(t) + DecrementAIDSFn(t) * Critical_Illness_AIDS_ind)) ^ (1 / 12))
-    End If
-End If
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Critical_Illness_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Retrenchment_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1160682+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1160682+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1160682+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to critical illness. It uses the previous period's healthy policies and applies a monthly probability of decrement due to critical illness and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Critical_Illness_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementCriticalIllnessFn(t)) ) ^ (1 / 12))
     End If
 End If
     </Value>
@@ -15852,112 +15627,6 @@ End If </Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Healthy_PRO_end</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Maturity_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1180694+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1180694+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1180694+02:00</LastModified>
-      <Notes>This formula calculates the number of healthy policies remaining at each time step. It subtracts all decrements (like lapses, mortality, disability, etc.) and maturity from the previous period's healthy policies, ensuring the result is not negative, and adjusts for bullet lapses.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>'If ValMonth(t) = 0 Or t = 0 Then
-'    If DurIF(t) &gt;= ProjTerm() Then
-'        Return 0
-'    Else 
-'        Return 1
-'    End If
-'Else 
-   Return Math.Max(
-    Healthy_PRO_endbeforematurity(t) - Maturity_PRO1(t), 0)
-
-'End If </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Healthy_PRO_endbeforematurity</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Terminal_Illness_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1180694+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1180694+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1180694+02:00</LastModified>
-      <Notes>This formula calculates the number of healthy policies remaining at each time step. It subtracts all decrements (like lapses, mortality, disability, etc.) and maturity from the previous period's healthy policies, ensuring the result is not negative, and adjusts for bullet lapses.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>'If ValMonth(t) = 0 Or t = 0 Then
-'    Return 1
-'Else 
-   Return Math.Max(
-    Healthy_PRO_start(t) * (1 - (
-        (Lapses_PRO1(t) * Lapses_dec_abs) + 
-        (Surrenders_PRO1(t) * Surrender_dec_abs) + 
-        (Mortality_PRO1(t) * Mortality_dec_abs) + 
-        (Annuity_Mortality_PRO1(t) * Annuity_Mortality_dec_abs) + 
-        (Accidental_Mortality_PRO1(t) * Accidental_Mortality_dec_abs) + 
-        (Accidental_Mortality_Fam_PRO1(t) * Accidental_Mortality_Fam_dec_abs) + 
-        (Natural_Mortality_PRO1(t) * Natural_Mortality_dec_abs) + 
-        (Natural_Mortality_Fam_PRO1(t) * Natural_Mortality_Fam_dec_abs) + 
-        (Permanent_Disability_PRO1(t) * Permanent_Disability_dec_abs) + 
-        (Temporary_Disability_PRO1(t) * Temporary_Disability_dec_abs) + 
-        (Retrenchment_PRO1(t) * Retrenchment_dec_abs) + 
-        (Critical_Illness_PRO1(t) * Critical_Illness_dec_abs) + 
-        (Terminal_Illness_PRO1(t) * Terminal_Illness_dec_abs) + 
-       0)), 0)
-
-'End If </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Healthy_PRO_start</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1180694+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1180694+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1180694+02:00</LastModified>
-      <Notes>This formula calculates the number of healthy policies remaining at each time step. It subtracts all decrements (like lapses, mortality, disability, etc.) and maturity from the previous period's healthy policies, ensuring the result is not negative, and adjusts for bullet lapses.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If DateSpan.TermInDays(Date.FromOADate(BalDate(t)), CoverEndDate) &gt;= 0 Then
-
-    If ValMonth(t) = 0 Or t = 0 Then
-        Return 1
-    Else
-        Return Healthy_PRO_end(t - 1)
-    End If
-
-Else
-
-    Return 0
-    
-End If
-
-'If ValMonth(t) = 0 Or t = 0 Then
-'    If DateSpan.TermInDays(Date.FromOADate(BalDate(t)), CoverEndDate) &gt;= 0 Then
-'        Return 1
-'    Else
-'        Return 0
-'    End If
-'Else
-'    Return Healthy_PRO_end(t - 1)
-'End If</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Inf_input</Name>
       <Parent>CurveNames</Parent>
       <Previous />
@@ -16204,34 +15873,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Lapses_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Healthy_PRO_start</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1190693+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1190693+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1190693+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that lapse in a given month. It uses the previous month's healthy policies and applies a monthly lapse rate, adjusted for AIDS-related mortality if applicable.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) = 0
-    Return 0
-Else 
-    If Lapses_Dec = 0
-     Return 0
-    Else 
-        Return 1 - (1 - DecrementLapsesFn(t)) ^ (1 / 12)
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Lapses_sensitivity</Name>
       <Parent>Sensitivity</Parent>
       <Previous>AcquisitionAAW_sensitivity</Previous>
@@ -16463,29 +16104,6 @@ End If </Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Maturity_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Healthy_PRO_endbeforematurity</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1190693+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1190693+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1190693+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that mature when only one month remains. It subtracts all other decrements from the previous month's healthy policies.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If DurIF(t) = ProjTerm() - 1 Then
-'     Return Healthy_PRO(t)
-    Return Healthy_PRO_endbeforematurity(t)
-Else 
-    Return 0
-End If </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>MorbRate</Name>
       <Parent>ShockSetup</Parent>
       <Previous>MorbidityCAT_ind</Previous>
@@ -16614,34 +16232,6 @@ Else
      Return 0
     Else 
         Return Healthy_PRO(t - 1) * (1 - (1 - (DecrementMortalityFn(t) + DecrementAIDSFn(t) * Mortality_AIDS_ind)) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Mortality_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Surrenders_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1200705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1200705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1200705+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to mortality. It uses the previous period's healthy policies and applies a monthly probability of decrement due to mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Mortality_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementMortalityFn(t))) ^ (1 / 12))
     End If
 End If
     
@@ -16881,34 +16471,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Natural_Mortality_Fam_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Natural_Mortality_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1200705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1200705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1200705+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to natural mortality for family members. It uses the previous period's healthy policies and applies a monthly probability of decrement due to natural mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Natural_Mortality_Fam_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementNaturalMortalityFamFn(t) )) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Natural_Mortality_PRO</Name>
       <Parent>PolicyRunOff</Parent>
       <Previous>Accidental_Mortality_Fam_PRO</Previous>
@@ -16937,43 +16499,15 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Natural_Mortality_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Accidental_Mortality_Fam_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1200705+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1200705+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1200705+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to natural mortality. It uses the previous period's healthy policies and applies a monthly probability of decrement due to natural mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Natural_Mortality_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementNaturalMortalityFn(t) )) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Natural_Mortality_sensitivity</Name>
       <Parent>Sensitivity</Parent>
-      <Previous>Terminal_Illness_sensitivity</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1200705+02:00</LastModifiedOn>
+      <Previous>ClaimExpPercClaimAmt_sensitivity</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T16:49:50.0239454+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1200705+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1200705+02:00</LastModified>
+      <LastModified>2026-08-24T16:49:50.0239454+02:00</LastModified>
       <Notes>This formula returns the sensitivity factor for natural mortality. It is used to test how results change under different natural mortality assumptions.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -17533,34 +17067,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Permanent_Disability_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Temporary_Disability_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1220681+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1220681+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1220681+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to permanent disability. It uses the previous period's healthy policies and applies a monthly probability of decrement due to permanent disability and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Permanent_Disability_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementPermanentDisabilityFn(t) )) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Permanent_Disability_cover</Name>
       <Parent>Cover</Parent>
       <Previous>Temporary_Disability_cover</Previous>
@@ -17661,24 +17167,6 @@ Return z
       <LastModified>2026-08-14T13:31:23.1220681+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>PolicyRunOff1</Name>
-      <Parent />
-      <Previous>PolicyRunOff</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1220681+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1220681+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1220681+02:00</LastModified>
-      <Notes />
-      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -17987,12 +17475,12 @@ End If</Value>
       <Name>RIPremiums</Name>
       <Parent>Reinsurance_Undecremented</Parent>
       <Previous>AnnuityRICover</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1220681+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-24T16:50:17.2007692+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1220681+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1220681+02:00</LastModified>
+      <LastModified>2026-08-24T16:50:17.2007692+02:00</LastModified>
       <Notes>This formula is a placeholder for reinsurance premiums. It currently returns 0 and includes a note that a source is needed to complete the function.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -18017,7 +17505,7 @@ Return 0
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1220681+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -18094,34 +17582,6 @@ Else
      Return 0
     Else 
         Return Healthy_PRO(t - 1) * (1 - (1 - (DecrementRetrenchmentFn(t) + DecrementAIDSFn(t) * Retrenchment_AIDS_ind)) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Retrenchment_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Permanent_Disability_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.123068+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.123068+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.123068+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to retrenchment. It uses the previous period's healthy policies and applies a monthly probability of decrement due to retrenchment and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Retrenchment_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementRetrenchmentFn(t) )) ^ (1 / 12))
     End If
 End If
     
@@ -18410,34 +17870,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Surrenders_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Lapses_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.123068+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.123068+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.123068+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) = 0
-    Return 0
-Else 
-    If Surrender_Dec = 0
-     Return 0
-    Else 
-        Return 1 - (1 - DecrementSurrendersFn(t)) ^ (1 / 12)
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Survivorship&amp;JointFunctions</Name>
       <Parent />
       <Previous>DecrementRates</Previous>
@@ -18499,34 +17931,6 @@ Else
      Return 0
     Else 
         Return Healthy_PRO(t - 1) * (1 - (1 - (DecrementTemporaryDisabilityFn(t) + DecrementAIDSFn(t) * Temporary_Disability_AIDS_ind)) ^ (1 / 12))
-    End If
-End If
-    
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Temporary_Disability_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Natural_Mortality_Fam_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1240685+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1240685+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1240685+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to temporary disability. It uses the previous period's healthy policies and applies a monthly probability of decrement due to temporary disability and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Temporary_Disability_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementTemporaryDisabilityFn(t) )) ^ (1 / 12))
     End If
 End If
     
@@ -18657,33 +18061,6 @@ End If
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Terminal_Illness_PRO1</Name>
-      <Parent>PolicyRunOff1</Parent>
-      <Previous>Critical_Illness_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1240685+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.1240685+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1240685+02:00</LastModified>
-      <Notes>This function calculates the probability of terminal illness for a given month. If the month is less than or equal to 0 or the terminal illness declaration is 0, it returns 0. Otherwise, it calculates the probability based on the healthy probability of the previous month and the decrement functions for terminal illness and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>If ValMonth(t) &lt;= 0
-    Return 0
-Else 
-    If Terminal_Illness_Dec = 0
-     Return 0
-    Else 
-        Return 1 * (1 - (1 - (DecrementTerminalIllnessFn(t) )) ^ (1 / 12))
-    End If
-End If
-    </Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Terminal_Illness_cover</Name>
       <Parent>Cover</Parent>
       <Previous>Critical_Illness_cover</Previous>
@@ -18775,13 +18152,13 @@ Return z
     <Formula>
       <Name>UndecrementedCashflows</Name>
       <Parent />
-      <Previous>PolicyRunOff1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1240685+02:00</LastModifiedOn>
+      <Previous>PolicyRunOff</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T15:41:43.9232683+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1240685+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1240685+02:00</LastModified>
+      <LastModified>2026-08-25T15:41:43.9232683+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>

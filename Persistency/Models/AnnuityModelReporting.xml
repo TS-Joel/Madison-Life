@@ -3,12 +3,12 @@
   <Name>AnnuityModelReporting</Name>
   <Parent>SubLayer4</Parent>
   <Previous>LifeModelReporting</Previous>
-  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-  <LastModifiedOn>2026-08-14T13:31:23.0492586+02:00</LastModifiedOn>
+  <LastModifiedBy>JoelGrosch</LastModifiedBy>
+  <LastModifiedOn>2026-08-25T15:51:32.8010435+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0492586+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-14T13:31:23.0492586+02:00</LastModified>
+  <LastModified>2026-08-25T15:51:32.8010435+02:00</LastModified>
   <Notes />
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -1791,42 +1791,6 @@ Return SMCoreModel.BalDate(t)</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>X_AnnuityMortalityFn</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_lx_MainLife_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.DecrementAnnuityMortalityFn(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_AnnuityMortalityLife2</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_lx_Life2_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.DecrementAnnuityMortalityLife2Fn(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>X_Annuity_BEL</Name>
       <Parent>X_BEL</Parent>
       <Previous />
@@ -1935,24 +1899,6 @@ Return SMCoreModel.BalDate(t)</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>X_Annuity_PRO1</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Mortality_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0572588+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0572588+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0572588+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Annuity_Mortality_PRO1(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>X_BEL</Name>
       <Parent>X_Added</Parent>
       <Previous>X_Age</Previous>
@@ -1973,13 +1919,13 @@ Return SMCoreModel.BalDate(t)</Value>
     <Formula>
       <Name>X_CF</Name>
       <Parent>X_Added</Parent>
-      <Previous>X_PRO_Alt</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
+      <Previous>X_BEL</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-25T15:51:32.7970433+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
+      <LastModified>2026-08-25T15:51:32.7970433+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -2002,168 +1948,6 @@ Return SMCoreModel.BalDate(t)</Value>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Healthy_PRO_end</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Maturity_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Healthy_PRO_end(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Healthy_PRO_endbeforematurity</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Annuity_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Healthy_PRO_endbeforematurity(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Healthy_PRO_start</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Healthy_PRO_start(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Maturity_PRO1</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Healthy_PRO_endbeforematurity</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Maturity_PRO1(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Mortality_PRO1</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Surrenders_PRO1</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Mortality_PRO1(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_PRO_Alt</Name>
-      <Parent>X_Added</Parent>
-      <Previous>X_BEL</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_Surrenders_PRO1</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Healthy_PRO_start</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Surrenders_PRO1(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_lx_Life2_PRO</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_AnnuityMortalityFn</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.lx_Life2_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>X_lx_MainLife_PRO</Name>
-      <Parent>X_PRO_Alt</Parent>
-      <Previous>X_Healthy_PRO_end</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0582572+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0582572+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0582572+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.lx_MainLife_PRO(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
