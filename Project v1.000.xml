@@ -5,7 +5,7 @@
   <LastModifiedOn xsi:nil="true" />
   <CreatedOn xsi:nil="true" />
   <Folder>false</Folder>
-  <LastModified>2026-08-25T16:22:22.590863+02:00</LastModified>
+  <LastModified>2026-08-25T17:00:35.2574751+02:00</LastModified>
   <Notes>Madison - 4.6.7 calibration model - as of 25-05-2026
 
 v4.6.6
@@ -57,15 +57,7 @@ v4.6.10
         <string>147b3798-ef3f-4f30-8674-253bd66a8839</string>
       </value>
     </item>
-    <item>
-      <key>
-        <int>2</int>
-      </key>
-      <value>
-        <string>16889ebb-a93d-495f-b242-18c12ac07143</string>
-      </value>
-    </item>
   </RevisionIds>
-  <CommitRef>8761916</CommitRef>
+  <CommitRef>f245a46</CommitRef>
   <OpenAsReadOnly>false</OpenAsReadOnly>
 </Project>
