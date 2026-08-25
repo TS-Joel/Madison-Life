@@ -1,0 +1,3 @@
+Wildcard	Replacement
+Data	Tables\Dec24 Madison Input management tool - Data.xlsm
+Assumptions	Tables\Dec24 Madison Input management tool - Assumptions.xlsm
