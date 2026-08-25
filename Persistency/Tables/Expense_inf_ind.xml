@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Expense_inf_ind</Name>
+  <Parent>Expenses&amp;fees</Parent>
+  <Previous>ExpenseAsumptionsTbl</Previous>
+  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
+  <LastModifiedOn>2026-08-14T13:31:23.3104362+02:00</LastModifiedOn>
+  <CreatedBy>KyawSoeThein</CreatedBy>
+  <CreatedOn>2026-08-14T13:31:23.3104362+02:00</CreatedOn>
+  <Folder>false</Folder>
+  <LastModified>2026-08-14T13:31:23.3104362+02:00</LastModified>
+  <Notes />
+  <IsExpanded>true</IsExpanded>
+  <IsProjectTable>true</IsProjectTable>
+  <IsDataSource>false</IsDataSource>
+  <IsODBCSource>false</IsODBCSource>
+  <IsWebDataSource>false</IsWebDataSource>
+  <IsDatFileSource>false</IsDatFileSource>
+  <IsDatabaseConnection>false</IsDatabaseConnection>
+  <WebDataSourceIsAdvanced>false</WebDataSourceIsAdvanced>
+  <FilePath>AssumptionsManager</FilePath>
+  <Schema />
+  <Reference>'Projection setup'!Expense_inf_ind</Reference>
+  <Delimiter>	</Delimiter>
+  <Internal>false</Internal>
+  <LookUpType>RowAndCol</LookUpType>
+  <BasisTable>true</BasisTable>
+  <LookUpVars>ProductName</LookUpVars>
+  <IndexCols>1</IndexCols>
+  <DoubleType>true</DoubleType>
+  <Rows>1</Rows>
+  <Cols>1</Cols>
+  <ColWidths>228;100;100;100;100;100;100</ColWidths>
+  <HasHeadings>true</HasHeadings>
+  <RunControlTable>false</RunControlTable>
+</Table>
