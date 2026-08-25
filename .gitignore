@@ -22,4 +22,4 @@ ProjectWorkspace.xml
 /Compile/
 /IOFiles/Properties/
 /IOFiles/Reports/
-/Tables/
+/Tables/*.xlsm
