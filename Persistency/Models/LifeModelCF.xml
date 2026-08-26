@@ -3,12 +3,12 @@
   <Name>LifeModelCF</Name>
   <Parent>SubLayer2</Parent>
   <Previous>FuneralModelCF</Previous>
-  <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-  <LastModifiedOn>2026-08-14T13:31:23.1660823+02:00</LastModifiedOn>
+  <LastModifiedBy>JoelGrosch</LastModifiedBy>
+  <LastModifiedOn>2026-08-26T18:05:34.5151109+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.1660823+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-14T13:31:23.1660823+02:00</LastModified>
+  <LastModified>2026-08-26T18:05:34.5151109+02:00</LastModified>
   <Notes>Product cashflow layer - contains Product logic and decremented Cashflows.</Notes>
   <IsExpanded>true</IsExpanded>
   <Description>Core model layer</Description>
@@ -841,15 +841,15 @@
     <Formula>
       <Name>BOMNonUnitCFs</Name>
       <Parent />
-      <Previous>BonusRates</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.168083+02:00</LastModifiedOn>
+      <Previous>Time</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:03:03.5861899+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.168083+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.168083+02:00</LastModified>
+      <LastModified>2026-08-26T18:03:03.5861899+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -880,12 +880,12 @@ Return SMCoreModel.BalDate(t)</Value>
       <Name>BonusRates</Name>
       <Parent />
       <Previous>Escalations</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.168083+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:00:29.2422521+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.168083+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.168083+02:00</LastModified>
+      <LastModified>2026-08-26T18:00:29.2422521+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -962,14 +962,14 @@ End If
       <Name>EOMNonUnitCFs</Name>
       <Parent />
       <Previous>BOMNonUnitCFs</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1690822+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:03:07.1241783+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1690822+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1690822+02:00</LastModified>
+      <LastModified>2026-08-26T18:03:07.1241783+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -979,13 +979,13 @@ End If
     <Formula>
       <Name>Escalations</Name>
       <Parent />
-      <Previous>Time</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1690822+02:00</LastModifiedOn>
+      <Previous>ExpectedReinsuranceRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:05:34.5151109+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1690822+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1690822+02:00</LastModified>
+      <LastModified>2026-08-26T18:05:34.5151109+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -1406,14 +1406,14 @@ End If</Value>
       <Name>ExpectedReinsuranceRecoveries</Name>
       <Parent />
       <Previous>EOMNonUnitCFs</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1700821+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:03:09.3532747+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1700821+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1700821+02:00</LastModified>
+      <LastModified>2026-08-26T18:03:09.3532747+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>

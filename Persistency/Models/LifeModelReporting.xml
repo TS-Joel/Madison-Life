@@ -4,11 +4,11 @@
   <Parent>SubLayer4</Parent>
   <Previous>FuneralModelReporting</Previous>
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-26T17:21:54.0357232+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-26T18:14:26.2783812+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.1710806+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-26T17:21:54.0357232+02:00</LastModified>
+  <LastModified>2026-08-26T18:14:26.2783812+02:00</LastModified>
   <Notes>Reporting model layer - contains the user defined output required for reporting. Output can be selected from any other sub-model layer.</Notes>
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -918,6 +918,24 @@
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>AccidentalDeathRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>DeathRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.3754527+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1286469+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.3754527+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.AccidentalDeathRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>AccidentalDeathUnwind</Name>
       <Parent>RiskBenefitUnwind</Parent>
       <Previous>NaturalDeathUnwind</Previous>
@@ -949,6 +967,24 @@
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return SMLifeModelReserving.AcquisitionAAWUnwind(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>BOMNonUnitCFs</Name>
+      <Parent />
+      <Previous>Unwind</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:10:04.2398739+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2128717+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-26T18:10:04.2398739+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -1152,6 +1188,24 @@
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>CriticalIllessRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>PermanentDisRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.5042221+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.5042221+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.CriticalIllessRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>CriticalIllnessBEL</Name>
       <Parent>NonUnitEOMBELComponents</Parent>
       <Previous>PermanentDisabilityBEL</Previous>
@@ -1201,6 +1255,474 @@
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return SMLifeModelReserving.DeathBEL(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>DeathRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous />
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.3435155+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1286469+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.3435155+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.DeathRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>EOMNonUnitCFs</Name>
+      <Parent />
+      <Previous>BOMNonUnitCFs</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:10:29.4616263+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4586589+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-26T18:10:29.4616263+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedAccidentalDeath</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedClaimExpPerClaim</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.0782417+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.0782417+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedAccidentalDeath(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedAquisitionAAW</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedPercCUExpense</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.9114161+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.9114161+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedAquisitionAAW(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedCashbackBenefit</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedPercPremExpense</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.8485155+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.8485155+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedCashbackBenefit(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedClaimExpPerClaim</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedClaimPercClaimAmt</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.0470121+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.0470121+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedClaimExpPerClaim(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedClaimPercClaimAmt</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedSurrender</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.0140299+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.0140299+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedClaimPercClaimAmt(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedComission</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedPremiums</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.6292169+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2128717+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.6292169+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedCommission(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedComissionClawback</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedComission</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.6672353+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.6672353+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedCommissionClawback(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedCriticalIllness</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedRetrenchment</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:14:26.2783812+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:14:26.2783812+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedCriticalIllness(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedDeath</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous />
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.954747+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4586589+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.954747+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedDeath(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedFuneral</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedCriticalIllness</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.3106939+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.3106939+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedFuneral(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedInitExpPerPrem</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedInitExpensePP</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.7439364+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.7439364+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedInitExpPerPrem(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedInitExpensePP</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedComissionClawback</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.7062653+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.7062653+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedInitExpensePP(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedNaturalDeath</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedAccidentalDeath</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.1065356+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.1065356+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedNaturalDeath(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedPPE</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedInitExpPerPrem</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.7769703+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.7769703+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedPPE(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedPercCUExpense</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedCashbackBenefit</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.8805024+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.8805024+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedPercCUExpense(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedPercPremExpense</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous>ExpectedPPE</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.81193+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2138699+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.81193+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedPercPremExpense(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedPermanentDisability</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedNaturalDeath</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.1401032+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.1401032+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedPermanentDisability(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedPremiums</Name>
+      <Parent>BOMNonUnitCFs</Parent>
+      <Previous />
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:11:04.3038094+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:04.2128717+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:11:04.3038094+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedPremiums(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedRIPremiums</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>FuneralRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.6537825+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.6537825+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedRIPremiums(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedReinsuranceRecoveries</Name>
+      <Parent />
+      <Previous>EOMNonUnitCFs</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:10:45.1307016+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1286469+02:00</CreatedOn>
+      <Folder>true</Folder>
+      <LastModified>2026-08-26T18:10:45.1307016+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value />
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedRetrenchment</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedTemporaryDisability</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.2462801+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.2462801+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedRetrenchment(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedSurrender</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedDeath</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:23.9837005+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:23.9837005+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedSurrender(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedTemporaryDisability</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedTerminalIllness</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:13:14.1260057+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:13:14.1260057+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedTemporaryDisability(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>ExpectedTerminalIllness</Name>
+      <Parent>EOMNonUnitCFs</Parent>
+      <Previous>ExpectedPermanentDisability</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.1727083+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:29.4595768+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.1727083+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.ExpectedTerminalIllness(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -1273,6 +1795,24 @@
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return SMLifeModelReserving.FuneralCoverUnwind(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>FuneralRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>RetrenchmentRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.6182699+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.6182699+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.FuneralRIRecoveries(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -1408,6 +1948,24 @@ End If</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>NaturalDeathRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>AccidentalDeathRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.407129+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.407129+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.NaturalDeathRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>NaturalDeathUnwind</Name>
       <Parent>RiskBenefitUnwind</Parent>
       <Previous>TemporaryDisabilityUnwind</Previous>
@@ -1484,11 +2042,11 @@ End If</Value>
       <Parent />
       <Previous>Time</Previous>
       <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-26T17:20:05.9253434+02:00</LastModifiedOn>
+      <LastModifiedOn>2026-08-26T18:10:04.2388712+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.179922+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-26T17:20:05.9253434+02:00</LastModified>
+      <LastModified>2026-08-26T18:10:04.2388712+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -1675,6 +2233,24 @@ End If</Value>
       <Value>'Return DateSpan.TermInMonths(SMCoreModel.CoverStartDate, SMCoreModel.ValuationDate)
 Return SMCoreModel.PeriodIF()</Value>
       <Format>#,##0</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
+      <Name>PermanentDisRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>TemporaryDisabilityRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.473166+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.473166+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.PermanentDisRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
     </Formula>
@@ -2237,6 +2813,24 @@ Return SMCoreModel.PeriodIF()</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>RetrenchmentRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>TerminalIllnessRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.5861839+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.5861839+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.RetrenchmentRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>RetrenchmentUnwind</Name>
       <Parent>RiskBenefitUnwind</Parent>
       <Previous>FuneralCoverUnwind</Previous>
@@ -2381,6 +2975,24 @@ Return SMCoreModel.PeriodIF()</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>TemporaryDisabilityRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>NaturalDeathRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.4411851+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.4411851+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.TemporaryDisabilityRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>TemporaryDisabilityUnwind</Name>
       <Parent>RiskBenefitUnwind</Parent>
       <Previous>PermenentDisabilityUnwind</Previous>
@@ -2417,6 +3029,24 @@ Return SMCoreModel.PeriodIF()</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
+      <Name>TerminalIllnessRIRecoveries</Name>
+      <Parent>ExpectedReinsuranceRecoveries</Parent>
+      <Previous>CriticalIllessRIRecoveries</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:12:24.5400431+02:00</LastModifiedOn>
+      <CreatedBy>JoelGrosch</CreatedBy>
+      <CreatedOn>2026-08-26T18:10:45.1297258+02:00</CreatedOn>
+      <Folder>false</Folder>
+      <LastModified>2026-08-26T18:12:24.5400431+02:00</LastModified>
+      <Notes />
+      <IsExpanded>true</IsExpanded>
+      <DataType>Double</DataType>
+      <Value>Return SMLifeModelCF.TerminalIllnessRIRecoveries(t)</Value>
+      <Format>#,##0.00</Format>
+      <Override>false</Override>
+      <IsPrivate>false</IsPrivate>
+    </Formula>
+    <Formula>
       <Name>TerminalIllnessUnwind</Name>
       <Parent>RiskBenefitUnwind</Parent>
       <Previous>RetrenchmentUnwind</Previous>
@@ -2438,12 +3068,12 @@ Return SMCoreModel.PeriodIF()</Value>
       <Name>Time</Name>
       <Parent />
       <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1859221+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T18:10:45.1307016+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1859221+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.1859221+02:00</LastModified>
+      <LastModified>2026-08-26T18:10:45.1307016+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -2463,7 +3093,7 @@ Return SMCoreModel.PeriodIF()</Value>
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1859221+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>

@@ -4,12 +4,12 @@
   <Parent>Testing Projections</Parent>
   <Previous>BabyPresent</Previous>
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-24T15:06:51.0110684+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-26T12:00:09.9763457+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.2896423+02:00</CreatedOn>
   <Key>Endowment1</Key>
   <Folder>false</Folder>
-  <LastModified>2026-08-24T15:06:51.0110684+02:00</LastModified>
+  <LastModified>2026-08-26T12:00:09.9763457+02:00</LastModified>
   <Notes />
   <IsExpanded>true</IsExpanded>
   <Type>Indiv</Type>
@@ -22,11 +22,11 @@
   <ExceptionAbortMax>1000</ExceptionAbortMax>
   <TableSplitDelimiter>_</TableSplitDelimiter>
   <WorkerPCs>false</WorkerPCs>
-  <MultiThreaded>true</MultiThreaded>
+  <MultiThreaded>false</MultiThreaded>
   <IsHpcRun>false</IsHpcRun>
   <ThreadsEvenSplit>true</ThreadsEvenSplit>
   <ParallelSplits>2</ParallelSplits>
-  <Threads>20</Threads>
+  <Threads>10</Threads>
   <SequentialStartUp>false</SequentialStartUp>
   <ProcessResultsOnMaster>true</ProcessResultsOnMaster>
   <StartUpDelay>0</StartUpDelay>
