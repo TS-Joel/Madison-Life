@@ -5,7 +5,7 @@
   <LastModifiedOn xsi:nil="true" />
   <CreatedOn xsi:nil="true" />
   <Folder>false</Folder>
-  <LastModified>2026-08-26T17:23:17.2884386+02:00</LastModified>
+  <LastModified>2026-08-26T18:14:26.2783812+02:00</LastModified>
   <Notes>Madison - 4.6.7 calibration model - as of 25-05-2026
 
 v4.6.6
@@ -31,6 +31,10 @@ v4.6.9
 v4.6.10
 - Updated starting bonus to be taken from data field and not recalculated.
 - Final testing version used for recon take-on
+
+v4.7.
+- Remove testing variables from all layers
+- Remove non-PV, EV variables from Reporting layer
 
 
 
@@ -66,6 +70,6 @@ v4.6.10
       </value>
     </item>
   </RevisionIds>
-  <CommitRef>7c52137</CommitRef>
+  <CommitRef>6171b6a</CommitRef>
   <OpenAsReadOnly>false</OpenAsReadOnly>
 </Project>

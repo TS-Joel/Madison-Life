@@ -4,11 +4,11 @@
   <Parent>SubLayer4</Parent>
   <Previous />
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-26T18:06:39.2805849+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-26T18:13:43.5031744+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.131088+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-26T18:06:39.2805849+02:00</LastModified>
+  <LastModified>2026-08-26T18:13:43.5031744+02:00</LastModified>
   <Notes>Reporting model layer - contains the user defined output required for reporting. Output can be selected from any other sub-model layer.</Notes>
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -982,7 +982,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-26T18:06:39.2805849+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -1288,7 +1288,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-26T18:06:38.9677425+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -1426,15 +1426,15 @@
       <Parent>EOMNonUnitCFs</Parent>
       <Previous>ExpectedRetrenchment</Previous>
       <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-26T17:57:35.2312981+02:00</LastModifiedOn>
+      <LastModifiedOn>2026-08-26T18:13:43.5031744+02:00</LastModifiedOn>
       <CreatedBy>JoelGrosch</CreatedBy>
       <CreatedOn>2026-08-26T17:44:27.535968+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-26T17:57:35.2312981+02:00</LastModified>
+      <LastModified>2026-08-26T18:13:43.5031744+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.CriticalIllness(t)</Value>
+      <Value>Return SMFuneralModelCF.ExpectedCriticalIllness(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -1648,7 +1648,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-26T18:06:32.9342817+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -1696,15 +1696,15 @@
       <Parent>EOMNonUnitCFs</Parent>
       <Previous>ExpectedTerminalIllness</Previous>
       <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-26T17:57:07.1217161+02:00</LastModifiedOn>
+      <LastModifiedOn>2026-08-26T18:13:33.1785489+02:00</LastModifiedOn>
       <CreatedBy>JoelGrosch</CreatedBy>
       <CreatedOn>2026-08-26T17:44:27.535968+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-26T17:57:07.1217161+02:00</LastModified>
+      <LastModified>2026-08-26T18:13:33.1785489+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
-      <Value>Return SMFuneralModelCF.TemporaryDisability(t)</Value>
+      <Value>Return SMFuneralModelCF.ExpectedTemporaryDisability(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
