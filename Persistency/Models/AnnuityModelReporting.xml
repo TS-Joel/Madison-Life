@@ -4,11 +4,11 @@
   <Parent>SubLayer4</Parent>
   <Previous>LifeModelReporting</Previous>
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T17:12:27.9249857+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-26T17:20:50.3618094+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0492586+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T17:12:27.9249857+02:00</LastModified>
+  <LastModified>2026-08-26T17:20:50.3618094+02:00</LastModified>
   <Notes />
   <IsExpanded>true</IsExpanded>
   <Inherit>false</Inherit>
@@ -900,114 +900,6 @@
   </Params>
   <Formulae>
     <Formula>
-      <Name>API</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous />
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.SinglePrem * Healthy_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Accidental_Mortality_Fam_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Accidental_Mortality_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to accidental death for family members. It uses the previous period's healthy policies and applies a monthly probability of decrement due to accidental death and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Accidental_Mortality_Fam_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Accidental_Mortality_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Annuity_Mortality_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to accidental death. It uses the previous period's healthy policies and applies a monthly probability of decrement due to accidental death and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Accidental_Mortality_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Annuity_Mortality_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Mortality_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Annuity_Mortality_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Apply_To_AnnuityExpenses_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Apply_To_Annuity_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Apply_To_AnnuityExpenses_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Apply_To_Annuity_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Maturity_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0532583+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0532583+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0532583+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Apply_To_Annuity_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>CU</Name>
       <Parent />
       <Previous>NonUnitBelComponents</Previous>
@@ -1084,24 +976,6 @@ End If</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Critical_Illness_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Retrenchment_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to critical illness. It uses the previous period's healthy policies and applies a monthly probability of decrement due to critical illness and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Critical_Illness_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>Frequency</Name>
       <Parent>Time</Parent>
       <Previous />
@@ -1158,24 +1032,6 @@ End If</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Healthy_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>API</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of healthy policies remaining at each time step. It subtracts all decrements (like lapses, mortality, disability, etc.) and maturity from the previous period's healthy policies, ensuring the result is not negative, and adjusts for bullet lapses.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Healthy_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>InceptionYRCohort</Name>
       <Parent>Time</Parent>
       <Previous>CoverStartDate</Previous>
@@ -1194,96 +1050,6 @@ Else
     Return CoverStartDate().Year
 End If</Value>
       <Format>#,##0</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Lapses_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Healthy_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that lapse in a given month. It uses the previous month's healthy policies and applies a monthly lapse rate, adjusted for AIDS-related mortality if applicable.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Lapses_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Maturity_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Terminal_Illness_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that mature when only one month remains. It subtracts all other decrements from the previous month's healthy policies.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Maturity_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Mortality_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Surrenders_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to mortality. It uses the previous period's healthy policies and applies a monthly probability of decrement due to mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Mortality_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Natural_Mortality_Fam_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Natural_Mortality_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0542584+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0542584+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0542584+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to natural mortality for family members. It uses the previous period's healthy policies and applies a monthly probability of decrement due to natural mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Natural_Mortality_Fam_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Natural_Mortality_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Accidental_Mortality_Fam_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0552578+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0552578+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0552578+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to natural mortality. It uses the previous period's healthy policies and applies a monthly probability of decrement due to natural mortality and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Natural_Mortality_PRO(t)</Value>
-      <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
     </Formula>
@@ -1308,13 +1074,13 @@ End If</Value>
     <Formula>
       <Name>NonUnitReserves</Name>
       <Parent />
-      <Previous>PolicyRunOff</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0552578+02:00</LastModifiedOn>
+      <Previous>Time</Previous>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T17:20:50.3507249+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.0552578+02:00</CreatedOn>
       <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0552578+02:00</LastModified>
+      <LastModified>2026-08-26T17:20:50.3507249+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -1461,24 +1227,6 @@ Return SMCoreModel.PeriodIF()</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Permanent_Disability_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Temporary_Disability_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0552578+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0552578+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0552578+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to permanent disability. It uses the previous period's healthy policies and applies a monthly probability of decrement due to permanent disability and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Permanent_Disability_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>PolSequence</Name>
       <Parent>Time</Parent>
       <Previous>SumAssured</Previous>
@@ -1493,24 +1241,6 @@ Return SMCoreModel.PeriodIF()</Value>
       <DataType>String</DataType>
       <Value>Return SMCoreModel.PolSequence</Value>
       <Format />
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>PolicyRunOff</Name>
-      <Parent />
-      <Previous>Time</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0552578+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0552578+02:00</CreatedOn>
-      <Folder>true</Folder>
-      <LastModified>2026-08-14T13:31:23.0552578+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value />
-      <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
     </Formula>
@@ -1573,24 +1303,6 @@ End If</Value>
       <IsPrivate>false</IsPrivate>
     </Formula>
     <Formula>
-      <Name>Retrenchment_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Permanent_Disability_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0562575+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0562575+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0562575+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to retrenchment. It uses the previous period's healthy policies and applies a monthly probability of decrement due to retrenchment and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Retrenchment_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
       <Name>SinglePremium</Name>
       <Parent>Time</Parent>
       <Previous>Frequency</Previous>
@@ -1622,60 +1334,6 @@ End If</Value>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value>Return SMCoreModel.AnnuityCoverAmt</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Surrenders_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Lapses_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0562575+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0562575+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0562575+02:00</LastModified>
-      <Notes />
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Surrenders_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Temporary_Disability_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Natural_Mortality_Fam_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0562575+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0562575+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0562575+02:00</LastModified>
-      <Notes>This formula calculates the number of policies that end due to temporary disability. It uses the previous period's healthy policies and applies a monthly probability of decrement due to temporary disability and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Temporary_Disability_PRO(t)</Value>
-      <Format>#,##0.00</Format>
-      <Override>false</Override>
-      <IsPrivate>false</IsPrivate>
-    </Formula>
-    <Formula>
-      <Name>Terminal_Illness_PRO</Name>
-      <Parent>PolicyRunOff</Parent>
-      <Previous>Critical_Illness_PRO</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.0562575+02:00</LastModifiedOn>
-      <CreatedBy>KyawSoeThein</CreatedBy>
-      <CreatedOn>2026-08-14T13:31:23.0562575+02:00</CreatedOn>
-      <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.0562575+02:00</LastModified>
-      <Notes>This function calculates the probability of terminal illness for a given month. If the month is less than or equal to 0 or the terminal illness declaration is 0, it returns 0. Otherwise, it calculates the probability based on the healthy probability of the previous month and the decrement functions for terminal illness and AIDS.</Notes>
-      <IsExpanded>true</IsExpanded>
-      <DataType>Double</DataType>
-      <Value>Return SMCoreModel.Terminal_Illness_PRO(t)</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
