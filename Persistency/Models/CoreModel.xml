@@ -4,11 +4,11 @@
   <Parent>SubLayer1</Parent>
   <Previous />
   <LastModifiedBy>JoelGrosch</LastModifiedBy>
-  <LastModifiedOn>2026-08-25T17:07:09.219413+02:00</LastModifiedOn>
+  <LastModifiedOn>2026-08-26T15:02:11.2438891+02:00</LastModifiedOn>
   <CreatedBy>KyawSoeThein</CreatedBy>
   <CreatedOn>2026-08-14T13:31:23.0651334+02:00</CreatedOn>
   <Folder>false</Folder>
-  <LastModified>2026-08-25T17:07:09.219413+02:00</LastModified>
+  <LastModified>2026-08-26T15:02:11.2438891+02:00</LastModified>
   <Notes>Core model layer - contains model point file inputs, parameters, tables and functions (decrements, undecremented cashflows and other source inputs).</Notes>
   <IsExpanded>true</IsExpanded>
   <Description>Core model layer</Description>
@@ -12829,7 +12829,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>true</IsExpanded>
+      <IsExpanded>false</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -12849,7 +12849,7 @@
       <Folder>true</Folder>
       <LastModified>2026-08-14T13:31:23.1130684+02:00</LastModified>
       <Notes />
-      <IsExpanded>false</IsExpanded>
+      <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
       <Value />
       <Format>#,##0.00</Format>
@@ -13890,15 +13890,15 @@ Return x * y</Value>
       <Parent>DecrementRates</Parent>
       <Previous />
       <LastModifiedBy>JoelGrosch</LastModifiedBy>
-      <LastModifiedOn>2026-08-25T17:00:35.2574751+02:00</LastModifiedOn>
+      <LastModifiedOn>2026-08-26T14:59:16.958022+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1160682+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-25T17:00:35.2574751+02:00</LastModified>
+      <LastModified>2026-08-26T14:59:16.958022+02:00</LastModified>
       <Notes>This formula applies claim improvement factors over time based on product type and date ranges. It returns different multipliers depending on the date and product description.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
-      <Value>While t &lt;= ProjTerm()
+      <Value>If t &lt;= ProjTerm()
     If ValMonth(t) = 0 Then
         Return 0
     End If
@@ -13908,7 +13908,9 @@ Return x * y</Value>
     Else
         Return 1.0
     End If
-End While</Value>
+Else 
+    Return 0
+End If</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -14740,12 +14742,12 @@ Return Math.Min(x * ClaimsImprovementsFn(t) * CriticalIllnessMultiplicativeLoadi
       <Name>DecrementLapsesFn</Name>
       <Parent>DecrementRates</Parent>
       <Previous>ClaimsImprovementsFn</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1170674+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T15:00:58.4138129+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1170674+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1170674+02:00</LastModified>
+      <LastModified>2026-08-26T15:00:58.4138129+02:00</LastModified>
       <Notes>This formula calculates the lapse rate based on rating factors and a lookup table. It applies a sensitivity factor and caps the lapse rate at 1. It uses a different value for durations beyond 36 months.</Notes>
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -14773,21 +14775,22 @@ LU = ProductName
 ' LU = String.Concat(RatingFactor1, Joiner, RatingFactor2, Joiner, RatingFactor3)
 'End If 
 
-While ValMonth(t) &gt; 0
-If Lapses_Dec = 0
-    y = 0
-Else If t &lt; (LapsesTbl.Rows - 1)
-  If NBMarker = "POS" And t &gt;= 1
-    y = LapsesTbl.Value(t - 1, LU)
-  Else 
-    y = LapsesTbl.Value(t, LU)
- End If
-Else
-    y = LapsesTbl.Value((LapsesTbl.Rows - 1), LU)
-End If 
-Return Math.Min(x * y * (1 + Lapse_margin_ind * Lapse_margin_val), 1)
-
-End While</Value>
+If ValMonth(t) &gt; 0
+    If Lapses_Dec = 0
+        y = 0
+    Else If t &lt; (LapsesTbl.Rows - 1)
+      If NBMarker = "POS" And t &gt;= 1
+        y = LapsesTbl.Value(t - 1, LU)
+      Else 
+        y = LapsesTbl.Value(t, LU)
+     End If
+    Else
+        y = LapsesTbl.Value((LapsesTbl.Rows - 1), LU)
+    End If 
+    Return Math.Min(x * y * (1 + Lapse_margin_ind * Lapse_margin_val), 1)
+Else 
+    Return 0
+End If </Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
@@ -15267,12 +15270,12 @@ Return Math.Min(x * ClaimsImprovementsFn(t) * RetrenchmentMultiplicativeLoading,
       <Name>DecrementSurrendersFn</Name>
       <Parent>DecrementRates</Parent>
       <Previous>DecrementTerminalIllnessFn</Previous>
-      <LastModifiedBy>KyawSoeThein</LastModifiedBy>
-      <LastModifiedOn>2026-08-14T13:31:23.1170674+02:00</LastModifiedOn>
+      <LastModifiedBy>JoelGrosch</LastModifiedBy>
+      <LastModifiedOn>2026-08-26T15:02:11.2438891+02:00</LastModifiedOn>
       <CreatedBy>KyawSoeThein</CreatedBy>
       <CreatedOn>2026-08-14T13:31:23.1170674+02:00</CreatedOn>
       <Folder>false</Folder>
-      <LastModified>2026-08-14T13:31:23.1170674+02:00</LastModified>
+      <LastModified>2026-08-26T15:02:11.2438891+02:00</LastModified>
       <Notes />
       <IsExpanded>true</IsExpanded>
       <DataType>Double</DataType>
@@ -15300,21 +15303,23 @@ LU = ProductName
 ' LU = String.Concat(RatingFactor1, Joiner, RatingFactor2, Joiner, RatingFactor7)
 'End If 
 
-While ValMonth(t) &gt; 0
-If Surrender_Dec = 0
-    y = 0
-Else If PolYear(t) &lt; 45
-  If NBMarker = "POS" And t &gt;= 1
-    y = SurrendersTbl.Value(CInt(PolYear(t - 1)), LU)
-  Else 
-    y = SurrendersTbl.Value(CInt(PolYear(t)), LU)
- End If
-Else If PolYear(t) &gt;= 45
-    y = SurrendersTbl.Value(45, LU)
-End If 
-Return Math.Min(x * y * (1 + Surrender_margin_ind * Surrender_margin_val), 1)
+If ValMonth(t) &gt; 0
+    If Surrender_Dec = 0
+        y = 0
+    Else If PolYear(t) &lt; 45
+      If NBMarker = "POS" And t &gt;= 1
+        y = SurrendersTbl.Value(CInt(PolYear(t - 1)), LU)
+      Else 
+        y = SurrendersTbl.Value(CInt(PolYear(t)), LU)
+     End If
+    Else If PolYear(t) &gt;= 45
+        y = SurrendersTbl.Value(45, LU)
+    End If 
+    Return Math.Min(x * y * (1 + Surrender_margin_ind * Surrender_margin_val), 1)
 
-End While</Value>
+Else
+    Return 0
+End If</Value>
       <Format>#,##0.00</Format>
       <Override>false</Override>
       <IsPrivate>false</IsPrivate>
